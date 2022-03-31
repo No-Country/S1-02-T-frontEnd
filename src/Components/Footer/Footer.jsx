@@ -4,6 +4,8 @@ import { BsArrowUpCircleFill, BsArrowRightSquareFill } from "react-icons/bs";
 
 import "./Footer.sass";
 
+import ScrollToTopOnClick from "../../Utils/ScrollToTopOnClick";
+
 const Footer = () => {
 	return (
 		<footer className="footer">
@@ -28,7 +30,12 @@ const Footer = () => {
 						<h2 className="list-item">Team</h2>
 						<h2 className="list-item">Careers</h2>
 					</div>
-					<BsArrowUpCircleFill id="arrowUp"></BsArrowUpCircleFill>
+					<BsArrowUpCircleFill
+						id="arrowUp"
+						onClick={() => {
+							ScrollToTopOnClick();
+						}}
+					></BsArrowUpCircleFill>
 				</div>
 				{/* Footer BOT */}
 				<div className="footer-bot">

@@ -6,6 +6,7 @@ import Navbar from "../Navbar/Navbar";
 
 import { ErrorPage, Homepage } from "../../Pages";
 import Footer from "../Footer/Footer";
+import Login from "../Login/Login";
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 				<Routes>
 					<Route path="/" exact element={<Homepage></Homepage>}></Route>
 					<Route path="*" element={<ErrorPage></ErrorPage>}></Route>
+					<Route path="/Login" element={<Login />} />
 					
 				</Routes>
 			</BrowserRouter>

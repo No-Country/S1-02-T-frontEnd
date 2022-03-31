@@ -4,7 +4,7 @@ import "./Homepage.sass";
 
 const Homepage = () => {
 	return (
-		<div>
+		<div className="homepage">
 			<h2>Homepage</h2>
 		</div>
 	);

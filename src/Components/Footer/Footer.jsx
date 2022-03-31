@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { BsArrowUpCircleFill, BsArrowRightSquareFill } from "react-icons/bs";
 
 import "./Footer.sass";
 
@@ -27,14 +28,16 @@ const Footer = () => {
 						<h2 className="list-item">Team</h2>
 						<h2 className="list-item">Careers</h2>
 					</div>
-					<div className="back-to-top">ICON</div>
+					<BsArrowUpCircleFill id="arrowUp"></BsArrowUpCircleFill>
 				</div>
 				{/* Footer BOT */}
 				<div className="footer-bot">
 					<form className="newsletter">
 						<h2>Subscribe to our newsletter</h2>
 						<input type="email" placeholder="Email Address" />
-						<button type="submit">ICON</button>
+						<button type="submit">
+							<BsArrowRightSquareFill id="submitArrow"></BsArrowRightSquareFill>
+						</button>
 					</form>
 					<div className="social-icons">
 						<FaFacebookF></FaFacebookF>

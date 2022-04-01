@@ -6,30 +6,27 @@
     background: white
     position: relative
     .homepage-center
-    .home-left
-        position: absolute
-        left: 5%
-        top: 50%
-        transform: translateY(-50%)
-        h2
-            font-size: 2.4rem
-            font-weight: 300
-            white-space: break-spaces
-            span
-                color: $color-main-normal
-                display: block
-                font-size: 5rem
-                font-weight: 400
-    .home-right
-        width: 55vh
-        position: absolute
-        top: 50%
-        right: 2%
-        transform: translateY(-50%)
-        img
-            width: 100%
-            height: 100%
-            object-fit: cover
+        width: 90%
+        height: 100%
+        margin: 0 auto
+        display: grid
+        grid-template-columns: repeat(2,1fr)
+        place-items: center
+        .home-left
+            h2
+                font-size: 2.4rem
+                font-weight: 300
+                span
+                    color: $color-main-normal
+                    display: block
+                    font-size: 5rem
+                    font-weight: 400
+        .home-right
+            width: 25rem
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
 
 .btn-pastel
     margin-top: 3rem

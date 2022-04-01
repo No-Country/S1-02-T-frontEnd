@@ -36,6 +36,8 @@ h1, h2, h3, h4, h5, h6
 a
     text-decoration: none !important
     color: inherit !important
+    &:visited
+        color: inherit !important
 
 ul, li
     list-style: none !important
@@ -51,10 +53,9 @@ button
 .section
     width: 100%
     height: auto
-
-.section-center
-    width: 95%
-    margin: 0 auto
+    .section-center
+        width: 90% !important
+        margin: 0 auto !important
 
 .section-title
     text-align: center
@@ -95,12 +96,14 @@ button
     color: $color-main-dark
     padding: 0.7rem 1.3rem
     transition: $transition-02
+    #btnArrow
+        margin-left: 1.2rem
+        font-size: 1.7rem
+        color: $color-main-dark
+        transition: $transition-02
     &:hover
         border: 2px solid $color-main-dark
         background: $color-main-dark
         color: $color-neutral-white
-
-#btnArrow
-    margin-left: 1.2rem
-    font-size: 1.7rem
-    color: $color-main-dark
+        #btnArrow
+            color: $color-neutral-white

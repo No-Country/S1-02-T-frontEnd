@@ -5,7 +5,7 @@ import { myServices } from "../../Utils/constants";
 
 const Services = () => {
 	return (
-		<section className="section">
+		<section className="services-sect">
 			<div className="section-center">
 				<div className="services-title">
 					<span>Servicios</span>

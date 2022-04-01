@@ -1,30 +1,21 @@
-import React from 'react'
-import './Navbar.scss'
+import React from "react";
+import "./Navbar.sass";
 
 const Navbar = () => {
-  return (
-    <div>
-        <div className='container-fluid'>
-            <div className='row'>
-                <div>
-                    <ul className='lista'>
-                        <div>
-                            <h2>Logo</h2>
-                        </div>
-                        <div>
-                            <li className='nav-link'>Nuestros Especialistas</li>
-                            <li className='nav-link'>Contacto</li>
-                            <li className='nav-link'>Blog</li>
-                            <li className='nav-link'>Acceder</li>
-                            <li className='nav-link'>Registrarse</li>
-                        </div>
-                    </ul>
-                </div>
-            </div>
+	return (
+		<nav className="navbar-container">
+			<div className="nav-center">
+				<h2 className="nav-left">Logo</h2>
+				<ul className="nav-right">
+					<li className="nav-link">Nuestros Especialistas</li>
+					<li className="nav-link">Contacto</li>
+					<li className="nav-link">Blog</li>
+					<li className="nav-link">Acceder</li>
+					<li className="nav-link">Registrarse</li>
+				</ul>
+			</div>
+		</nav>
+	);
+};
 
-        </div>
-    </div>
-  )
-}
-
-export default Navbar
+export default Navbar;

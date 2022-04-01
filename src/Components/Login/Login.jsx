@@ -9,7 +9,7 @@ const Login = () => {
             <form className='logForm'>
               <input type='email' name='email' placeholder='Email' /><br/>
               <input type="password" name='password' placeholder='Contraseña' /><br/>
-              <button>Ingresa</button><br/>
+              <button>Ingresa</button>
               <button>Registrate</button>
              </form>
           </div>

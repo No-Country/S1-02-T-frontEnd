@@ -7,28 +7,17 @@ const Login = () => {
         <div className="container">
             <div className='row'>
                 <div className='col'>
-                    <li>
-                        <input type='text' name="name" placeholder="Nombre:" />
-
-                    </li>
-                    <li>
-                        <input type='text' name="lastName" placeholder="Apellido:" />
-                    </li>
-                    <li>
-                        <input type="text" name='birth date' placeholder='Fecha de Nacimiento' />
-                    </li>
-                    <li>
-                        <input type="tel" name="phone number" placeholder="Número de teléfono" />
-                    </li>
-                    <li>
-                        <input type="email" name="mail" placeholder="Email" />
-                    </li>
-                    <li>
-                        <input type="password" name='password' placeholder='Contraseña' />
-                    </li>
-                    <li>
-                    <input type="password" name='password' placeholder='Repetir contraseña' />
-                    </li>
+                    <form className='formulario'>
+                        <li>
+                            <input type="email" name="mail" placeholder="Email" />
+                        </li>
+                        <li>
+                            <input type="password" name='password' placeholder='Contraseña' />
+                        </li>
+                        <button className='login-button'>ingresar</button>
+                        <button className='login-button'>registrarse</button>
+                    </form>
+                    
                     
                 </div>
             </div>

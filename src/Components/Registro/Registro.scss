@@ -1,31 +1,13 @@
-input {
-    
-    margin-top:15px;
-    border-right: none;
-    border-left: none;
-    border-top: none;
-    height: 50%;
-    padding: 15px;
-    
-}
 
-.formulario{
+
+.Formulario{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 15%;
-    border: 6px solid;
-    margin-left: 15px;
-    margin-right: 25%;
-    list-style: none;
-    margin-bottom: 12px;
-    margin-top: 12px;
-    
 }
 
-.login-button{
+.registro_buton{
     background-color: #1D1A5F ;
     display: inline-block;
     border: none;

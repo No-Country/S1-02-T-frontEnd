@@ -1,0 +1,44 @@
+.logForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 15%;
+    
+
+}
+
+input{
+    display: block;
+}
+
+.row{
+    border-radius: 15%;
+}
+
+button{
+    background-color: #96A5F5;
+    display: inline-block;
+    border: none;
+    padding: 10px;
+    margin: 12px;
+    width: 170px;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+input{
+    
+    padding: 10px;
+    margin: 12px;
+    width: 170px;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+    font-size: 15px;
+}
+

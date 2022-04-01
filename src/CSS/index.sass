@@ -25,6 +25,7 @@ $transition-02: 0.3s linear all
     margin: 0
     padding: 0
     box-sizing: border-box
+    font-family: $font-main
 
 h1, h2, h3, h4, h5, h6
     margin: 0 !important
@@ -39,7 +40,12 @@ ul, li
     margin: 0 !important
     padding: 0 !important
 
-.section
+button
+    outline: none
+    border: none
+
+// Sections
+.section-center
     width: 95%
     margin: 0 auto
 
@@ -52,3 +58,42 @@ ul, li
     margin-bottom: 2.5rem
     font-family: $font-main
     color: $color-neutral-black
+
+// Buttons
+.btn-solid
+    font-size: 1.2rem
+    font-weight: 300
+    font-family: $font-main
+    border: 2px solid $color-main-dark
+    background: $color-main-dark
+    color: $color-neutral-white
+    padding: 0.7rem 1.3rem
+
+.btn-ghost
+    font-size: 1.2rem
+    font-weight: 400
+    font-family: $font-main
+    background: transparent
+    border: 2px solid $color-main-dark
+    color: $color-main-dark
+    padding: 0.7rem 1.3rem
+
+.btn-pastel
+    font-size: 1.2rem
+    font-weight: 400
+    letter-spacing: 1.2px
+    font-family: $font-main
+    background: #E3E9FF
+    border: 2px solid #E3E9FF
+    color: $color-main-dark
+    padding: 0.7rem 1.3rem
+    transition: $transition-02
+    &:hover
+        border: 2px solid $color-main-dark
+        background: $color-main-dark
+        color: $color-neutral-white
+
+#btnArrow
+    margin-left: 1.2rem
+    font-size: 1.7rem
+    color: $color-main-dark

@@ -12,8 +12,8 @@ import Registro from "../Registro/Registro";
 function App() {
 	return (
 		<div>
+				<BrowserRouter>
 			<Navbar />
-			<BrowserRouter>
 				<Routes>
 					<Route path="/" exact element={<Homepage></Homepage>}></Route>
 					<Route path="*" element={<Error404></Error404>}></Route>

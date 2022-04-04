@@ -52,12 +52,14 @@ button
 // Sections
 .section
     padding-bottom: 4rem
+    height: 100% !important
     .section-center
         width: 90%
         margin: 0 auto
+        display: block !important
         .section-title
             text-align: center
-            margin-bottom: 2.5rem
+            margin-bottom: 3rem !important
             span
                 font-weight: 400
                 font-size: 1rem
@@ -65,7 +67,7 @@ button
                 color: $color-main-light
             h2
                 font-weight: 300
-                margin-top: 0.3rem !important
+                margin-top: 0.3rem
                 font-size: 2.7rem
                 letter-spacing: 1.2px
 
@@ -115,5 +117,13 @@ button
     .section
         .section-center
         .section-title
+            span
+                font-size: 1.5rem !important
+
+@media ( min-width: 1250px  )
+    .section
+        .section-center
+        .section-title
+            margin-bottom: 4rem !important
             span
                 font-size: 1.5rem !important

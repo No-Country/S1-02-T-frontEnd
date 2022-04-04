@@ -8,7 +8,7 @@ const Services = () => {
 		<section className="section">
 			<div className="section-center">
 				<div className="section-title">
-					<span>Servicios</span>
+					<span>Plataforma</span>
 					<h2>Como te podemos Ayudar?</h2>
 				</div>
 				<div className="services-container">

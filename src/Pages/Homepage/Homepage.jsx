@@ -9,7 +9,7 @@ import Professions from "../Professions/Professions";
 
 const Homepage = () => {
 	return (
-		<Fragment>
+		<Fragment>			
 			<div className="home-container">
 				<div className="home-left">
 					<h2 className="home-text">

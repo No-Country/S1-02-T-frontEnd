@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.sass";
 
 const Navbar = () => {
 	return (
 		<nav className="navbar-container">
 			<div className="nav-center">
-				<h2 className="nav-left">Logo</h2>
+				<Link to="/" className="nav-left">
+					Logo
+				</Link>
 				<ul className="nav-right">
 					<li className="nav-link">Nuestros Especialistas</li>
 					<li className="nav-link">Contacto</li>

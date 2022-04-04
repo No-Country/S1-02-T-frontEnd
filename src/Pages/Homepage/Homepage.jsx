@@ -5,6 +5,7 @@ import { BsArrowRight } from "react-icons/bs";
 import Services from "../Services/Services";
 
 import { bannerImageUrl } from "../../Utils/constants";
+import Professions from "../Professions/Professions";
 
 const Homepage = () => {
 	return (
@@ -28,6 +29,7 @@ const Homepage = () => {
 				</div>
 			</section>
 			<Services></Services>
+			<Professions></Professions>
 		</Fragment>
 	);
 };

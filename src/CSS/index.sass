@@ -16,6 +16,7 @@ $color-neutral-300: #DEE2E6
 $color-neutral-200: #E9ECEF
 $color-neutral-100: #F8F9FA
 $color-background: #201F1F
+$color-background-2: #cacbff
 // Transition:
 $transition-03: 0.3s linear all
 $transition-02: 0.3s linear all
@@ -37,7 +38,7 @@ a
     text-decoration: none !important
     color: inherit !important
     &:visited
-        color: inherit !important
+        color: none !important
 
 ul, li
     list-style: none !important
@@ -78,7 +79,7 @@ button
     font-family: $font-main
     border: 2px solid $color-main-dark
     background: $color-main-dark
-    color: $color-neutral-white
+    color: $color-neutral-white !important
     padding: 0.7rem 1.3rem
 
 .btn-ghost

@@ -6,10 +6,11 @@ import Services from "../Services/Services";
 
 import { bannerImageUrl } from "../../Utils/constants";
 import Professions from "../Professions/Professions";
+import { ProfessionsProfiver } from "../../Context/professions_context";
 
 const Homepage = () => {
 	return (
-		<Fragment>			
+		<Fragment>
 			<div className="home-container">
 				<div className="home-left">
 					<h2 className="home-text">
@@ -25,7 +26,9 @@ const Homepage = () => {
 				</div>
 			</div>
 			<Services></Services>
-			<Professions></Professions>
+			<ProfessionsProfiver>
+				<Professions></Professions>
+			</ProfessionsProfiver>
 		</Fragment>
 	);
 };

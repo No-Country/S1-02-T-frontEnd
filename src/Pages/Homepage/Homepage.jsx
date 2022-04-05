@@ -2,9 +2,10 @@ import React, { Fragment } from "react";
 import "./Homepage.sass";
 
 import Banner from "../Banner/Banner";
-import Services from "../Services/Services";
 import Professions from "../Professions/Professions";
 import CallToAction from "../CallToAction/CallToAction";
+import Services from "../Services/Services";
+import Contacto from "../Contacto/Contacto";
 
 import { ProfessionsProvider } from "../../Context/professions_context";
 
@@ -17,6 +18,7 @@ const Homepage = () => {
 			</ProfessionsProvider>
 			<CallToAction></CallToAction>
 			<Services></Services>
+			<Contacto></Contacto>
 		</Fragment>
 	);
 };

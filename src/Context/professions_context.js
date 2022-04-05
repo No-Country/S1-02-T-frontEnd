@@ -18,7 +18,7 @@ const initialState = {
 
 const ProfessionsContext = React.createContext();
 
-export const ProfessionsProfiver = ({ children }) => {
+export const ProfessionsProvider = ({ children }) => {
 	const [state, dispatch] = useReducer(reducer, initialState);
 
 	// *** Get All ***

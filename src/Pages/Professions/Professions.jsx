@@ -1,6 +1,7 @@
 import React from "react";
 
 import Loading from "../../Components/Loading/Loading";
+import Error from "../../Components/Error/Error";
 
 import { useProfessionsContext } from "../../Context/professions_context";
 
@@ -9,13 +10,14 @@ const Professions = () => {
 	const {
 		professions_loading: isLoading,
 		professions_error: error,
-		professions: professions,
+		professions,
 	} = useProfessionsContext();
+
 	if (isLoading) {
 		return <Loading></Loading>;
 	}
 	if (error) {
-		return <h2>Error...</h2>;
+		return <Error></Error>;
 	}
 	return (
 		<section className="section">

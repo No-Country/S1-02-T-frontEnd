@@ -17,7 +17,11 @@ const professions_reducer = (state, action) => {
 		};
 	}
 	if (action.type === GET_PROFESSIONS_ERROR) {
-		return { ...state, professions_loading: false, professions_error: true };
+		return {
+			...state,
+			professions_loading: false,
+			professions_error: true,
+		};
 	}
 	throw new Error(`No Matching ${action.type} -> Action Type`);
 };

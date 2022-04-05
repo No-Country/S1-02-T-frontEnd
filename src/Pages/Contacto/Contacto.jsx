@@ -5,7 +5,7 @@ import "./Contacto.sass";
 
 const Contacto = () => {
 	return (
-		<section className="section contact-sect">
+		<section className="contact-sect">
 			<div className="section-center">
 				<div className="contact-container">
 					<div className="contact-top">
@@ -69,6 +69,9 @@ const Contacto = () => {
 									placeholder="Mensaje..."
 								></textarea>
 							</div>
+							<button type="submit" className="btn-pastel btn-mobile">
+								Enviar
+							</button>
 						</form>
 					</div>
 				</div>

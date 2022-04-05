@@ -1,4 +1,5 @@
 import React from "react";
+import "./Professions.sass";
 
 import Loading from "../../Components/Loading/Loading";
 import Error from "../../Components/Error/Error";
@@ -28,7 +29,17 @@ const Professions = () => {
 				</div>
 				<div className="professions-container">
 					{professions.map((singleProfession) => {
-						return <h2 key={singleProfession.id}>{singleProfession.title}</h2>;
+						const { id, title, description, imageUrl } = singleProfession;
+						return (
+							<article className="prof-card" key={id}>
+								<div className="prof-img-container">
+									<div className="image-overlay"></div>
+									<img src={imageUrl} alt={description} />
+								</div>
+								<h2 className="prof-title">{title}</h2>
+								<p className="prof-desc">{description}</p>
+							</article>
+						);
 					})}
 				</div>
 			</div>

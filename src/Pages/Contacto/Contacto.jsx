@@ -10,13 +10,13 @@ const Contacto = () => {
 				<div className="contact-container">
 					<div className="contact-top">
 						<h2>Contáctenos</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+						<p>Un representante lo atenderá ante cualquier cosulta.</p>
 						<div className="contact-cta">
-							<AiOutlineMail></AiOutlineMail>
+							<AiOutlineMail className="contact-icon"></AiOutlineMail>
 							<span>support@website.com</span>
 						</div>
 						<div className="contact-cta">
-							<AiOutlinePhone></AiOutlinePhone>
+							<AiOutlinePhone className="contact-icon"></AiOutlinePhone>
 							<span>(480) 555-0103</span>
 						</div>
 					</div>

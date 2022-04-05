@@ -69,7 +69,7 @@ const Contacto = () => {
 									placeholder="Mensaje..."
 								></textarea>
 							</div>
-							<button type="submit" className="btn-pastel btn-mobile">
+							<button type="submit" className="btn-light btn-mobile">
 								Enviar
 							</button>
 						</form>

@@ -4,6 +4,7 @@ import "./Homepage.sass";
 import Banner from "../Banner/Banner";
 import Services from "../Services/Services";
 import Professions from "../Professions/Professions";
+import CallToAction from "../CallToAction/CallToAction";
 
 import { ProfessionsProvider } from "../../Context/professions_context";
 
@@ -11,10 +12,11 @@ const Homepage = () => {
 	return (
 		<Fragment>
 			<Banner></Banner>
-			<Services></Services>
 			<ProfessionsProvider>
 				<Professions></Professions>
 			</ProfessionsProvider>
+			<CallToAction></CallToAction>
+			<Services></Services>
 		</Fragment>
 	);
 };

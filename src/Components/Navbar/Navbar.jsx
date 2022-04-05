@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { AiOutlineMenu } from "react-icons/ai";
+
 import "./Navbar.sass";
 
 const Navbar = () => {
@@ -9,6 +11,9 @@ const Navbar = () => {
 				<Link to="/" className="nav-left">
 					Logo
 				</Link>
+				<div className="nav-ham">
+					<AiOutlineMenu></AiOutlineMenu>
+				</div>
 				<ul className="nav-right">
 					<li className="nav-link">Nuestros Especialistas</li>
 					<li className="nav-link">Contacto</li>

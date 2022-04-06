@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 import "./CallToAction.sass";
 
-import { bannerCTA } from "../../Utils/constants";
+import { bannerCTA } from "../../../Utils/constants";
 
 const CallToAction = () => {
 	return (

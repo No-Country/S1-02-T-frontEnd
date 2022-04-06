@@ -1,7 +1,7 @@
 import React from "react";
 import "./Services.sass";
 
-import { myServices } from "../../Utils/constants";
+import { myServices } from "../../../Utils/constants";
 
 const Services = () => {
 	return (

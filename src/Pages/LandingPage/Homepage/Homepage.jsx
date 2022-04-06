@@ -6,8 +6,9 @@ import Professions from "../Professions/Professions";
 import CallToAction from "../CallToAction/CallToAction";
 import Services from "../Services/Services";
 import Contacto from "../Contacto/Contacto";
+import Estadisticas from "../Estadisticas/Estadisticas";
 
-import { ProfessionsProvider } from "../../Context/professions_context";
+import { ProfessionsProvider } from "../../../Context/professions_context";
 
 const Homepage = () => {
 	return (
@@ -18,6 +19,7 @@ const Homepage = () => {
 			</ProfessionsProvider>
 			<CallToAction></CallToAction>
 			<Services></Services>
+			<Estadisticas></Estadisticas>
 			<Contacto></Contacto>
 		</Fragment>
 	);

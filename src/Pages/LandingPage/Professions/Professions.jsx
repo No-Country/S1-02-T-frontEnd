@@ -1,10 +1,10 @@
 import React from "react";
 import "./Professions.sass";
 
-import Loading from "../../Components/Loading/Loading";
-import Error from "../../Components/Error/Error";
+import Loading from "../../../Components/Loading/Loading";
+import Error from "../../../Components/Error/Error";
 
-import { useProfessionsContext } from "../../Context/professions_context";
+import { useProfessionsContext } from "../../../Context/professions_context";
 
 const Professions = () => {
 	// *** GET ***

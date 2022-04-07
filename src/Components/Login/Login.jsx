@@ -5,7 +5,7 @@ const Login = () => {
   return (
     <div>
         <div>
-        <img className="icono" src="" />
+        <img className="icono" src="" alt="logo" />
         <div className="container">
           <div className="img">
             <img src="" alt="img login" />

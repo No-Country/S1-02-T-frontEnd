@@ -10,7 +10,7 @@
     text-align: center
     .service2-card
         margin-bottom: 3rem
-        .img-container            
+        .img-container
             img
                 width: 35% !important
     .card-info
@@ -26,3 +26,14 @@
             font-weight: 400
             letter-spacing: 0.7px
             opacity: 0.8
+
+@media  (min-width: 768px)
+    .services2-container
+        display: grid !important
+        grid-template-columns: repeat(2, 1fr)
+        column-gap: 2rem
+        padding-top: 3rem
+@media  (min-width: 1000px)
+    .services2-container
+        grid-template-columns: repeat(3, 1fr)
+        column-gap: 3rem

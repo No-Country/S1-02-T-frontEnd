@@ -19,13 +19,13 @@ const Homepage = () => {
 			<ProfessionalsProvider>
 				<Professionals></Professionals>
 			</ProfessionalsProvider>
+			<Services2></Services2>
 			<ProfessionsProvider>
 				<Professions></Professions>
 			</ProfessionsProvider>
-			<CallToAction></CallToAction>
-			<Services2></Services2>
 			{/* <Services></Services> */}
 			<Estadisticas></Estadisticas>
+			<CallToAction></CallToAction>
 			<Contacto></Contacto>
 		</Fragment>
 	);

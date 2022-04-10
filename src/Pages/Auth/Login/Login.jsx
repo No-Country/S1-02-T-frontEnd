@@ -33,9 +33,16 @@ const Login = () => {
 				email,
 				password,
 			})
-			.then((response) => {
-				console.log(response);
-			});
+			.then(
+				(response) => {
+					console.log(response);
+				},
+				(error) => {
+					const myErr = error.response.data;
+					console.log(myErr.error);
+					console.log(myErr.status);
+				}
+			);
 	};
 
 	return (

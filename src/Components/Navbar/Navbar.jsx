@@ -32,11 +32,21 @@ const Navbar = () => {
 						<AiOutlineMenu></AiOutlineMenu>
 					</div>
 					<ul className="nav-right">
-						<li className="nav-link">Nuestros Especialistas</li>
-						<li className="nav-link">Contacto</li>
-						<li className="nav-link">Blog</li>
-						<li className="nav-link">Acceder</li>
-						<li className="nav-link">Registrarse</li>
+						<Link to="/" className="nav-link">
+							Nuestros Especialistas
+						</Link>
+						<Link to="/" className="nav-link">
+							Blog
+						</Link>
+						<Link to="/" className="nav-link">
+							Contacto
+						</Link>
+						<Link to="/" className="nav-link">
+							Acceder
+						</Link>
+						<Link to="/" className="nav-link">
+							Registro
+						</Link>
 					</ul>
 				</div>
 			</nav>

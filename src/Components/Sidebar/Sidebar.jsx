@@ -10,7 +10,13 @@ const Sidebar = ({ closeFunction }) => {
 		<article className="sidebar-container">
 			<div className="sidebar-center">
 				<div className="side-top">
-					<Link to="/" className="nav-left">
+					<Link
+						to="/"
+						className="nav-left"
+						onClick={() => {
+							closeFunction();
+						}}
+					>
 						<img src={Logox1} alt="TeleMed" />
 					</Link>
 					<FaTimes
@@ -21,49 +27,73 @@ const Sidebar = ({ closeFunction }) => {
 					></FaTimes>
 				</div>
 				<div className="side-bot">
-					<h2>Explorar</h2>
-					<hr />
-					<div className="side-links">
-						<Link
-							to="/"
-							onClick={() => {
-								closeFunction();
-							}}
-						>
-							Nuestros Especialistas
-						</Link>
-						<Link
-							to="/"
-							onClick={() => {
-								closeFunction();
-							}}
-						>
-							Contacto
-						</Link>
-						<Link
-							to="/"
-							onClick={() => {
-								closeFunction();
-							}}
-						>
-							Blog
-						</Link>
-						<Link
-							to="/"
-							onClick={() => {
-								closeFunction();
-							}}
-						>
-							Acceder
-						</Link>
-						<Link
-							to="/"
-							onClick={() => {
-								closeFunction();
-							}}
-						>
-							Registrarse
-						</Link>
+					<div className="side-section">
+						<h2>Explorar</h2>
+						<hr />
+						<div className="side-links">
+							<Link
+								to="/"
+								onClick={() => {
+									closeFunction();
+								}}
+							>
+								Inicio
+							</Link>
+							<Link
+								to="/"
+								onClick={() => {
+									closeFunction();
+								}}
+							>
+								Nuestros Especialistas
+							</Link>
+							<Link
+								to="/"
+								onClick={() => {
+									closeFunction();
+								}}
+							>
+								Profesiones
+							</Link>
+							<Link
+								to="/"
+								onClick={() => {
+									closeFunction();
+								}}
+							>
+								Blog
+							</Link>
+							<Link
+								to="/"
+								onClick={() => {
+									closeFunction();
+								}}
+							>
+								Contacto
+							</Link>
+						</div>
+					</div>
+					<div className="side-section">
+						<h2>Usuarios</h2>
+						<hr />
+						<div className="side-links">
+							<Link
+								to="/"
+								onClick={() => {
+									closeFunction();
+								}}
+							>
+								Acceder
+							</Link>
+							<Link
+								to="/"
+								onClick={() => {
+									closeFunction();
+								}}
+							>
+								Registrarse
+							</Link>
+						</div>
 					</div>
 				</div>
 			</div>

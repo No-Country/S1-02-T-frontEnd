@@ -5,6 +5,8 @@ import { FaTimes } from "react-icons/fa";
 import "./Sidebar.sass";
 import Logox1 from "../../Assets/Logox1.png";
 
+import ScrollToTopOnClick from "../../Utils/ScrollToTopOnClick";
+
 const Sidebar = ({ closeFunction }) => {
 	return (
 		<article className="sidebar-container">
@@ -14,6 +16,7 @@ const Sidebar = ({ closeFunction }) => {
 						to="/"
 						className="nav-left"
 						onClick={() => {
+							ScrollToTopOnClick();
 							closeFunction();
 						}}
 					>
@@ -34,6 +37,7 @@ const Sidebar = ({ closeFunction }) => {
 							<Link
 								to="/"
 								onClick={() => {
+									ScrollToTopOnClick();
 									closeFunction();
 								}}
 							>

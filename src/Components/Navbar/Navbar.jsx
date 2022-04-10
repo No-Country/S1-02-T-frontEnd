@@ -6,6 +6,8 @@ import "./Navbar.sass";
 import Logox1 from "../../Assets/Logox1.png";
 import Sidebar from "../Sidebar/Sidebar";
 
+import ScrollToTopOnClick from "../../Utils/ScrollToTopOnClick";
+
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -20,7 +22,13 @@ const Navbar = () => {
 		<React.Fragment>
 			<nav className="navbar-container">
 				<div className="nav-center">
-					<Link to="/" className="nav-left">
+					<Link
+						to="/"
+						className="nav-left"
+						onClick={() => {
+							ScrollToTopOnClick();
+						}}
+					>
 						<img src={Logox1} alt="TeleMed" />
 					</Link>
 					<div

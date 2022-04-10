@@ -14,7 +14,7 @@ import { ProfessionalsProvider } from "../../../Context/professionals_context";
 
 const Homepage = () => {
 	return (
-		<Fragment> 
+		<Fragment>
 			<Banner></Banner>
 			<ProfessionalsProvider>
 				<Professionals></Professionals>

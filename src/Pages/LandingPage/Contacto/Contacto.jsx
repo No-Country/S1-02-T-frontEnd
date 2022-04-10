@@ -5,7 +5,7 @@ import "./Contacto.sass";
 
 const Contacto = () => {
 	return (
-		<section className="contact-sect">
+		<section className="contact-sect" id="cont">
 			<div className="section-center">
 				<div className="contact-container">
 					<div className="contact-top">

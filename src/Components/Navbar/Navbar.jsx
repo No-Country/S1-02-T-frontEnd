@@ -8,8 +8,9 @@ import Sidebar from "../Sidebar/Sidebar";
 
 import { ScrollToTopOnClick, ScrollToView } from "../../Utils";
 
-const Navbar = ({ scrollList }) => {
+const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const scrollIDs = ["esp", "prof", "cont"];
 
 	const openSidebar = () => {
 		setIsOpen(true);
@@ -42,7 +43,7 @@ const Navbar = ({ scrollList }) => {
 					<ul className="nav-right">
 						<li
 							onClick={() => {
-								ScrollToView(scrollList[0]);
+								ScrollToView(scrollIDs[0]);
 							}}
 							className="nav-link"
 						>
@@ -60,7 +61,7 @@ const Navbar = ({ scrollList }) => {
 						</li>
 						<li
 							onClick={() => {
-								ScrollToView(scrollList[2]);
+								ScrollToView(scrollIDs[2]);
 							}}
 							className="nav-link"
 						>
@@ -90,7 +91,7 @@ const Navbar = ({ scrollList }) => {
 				</div>
 			</nav>
 			{isOpen && (
-				<Sidebar closeFunction={closeSidebar} scrollList={scrollList}></Sidebar>
+				<Sidebar closeFunction={closeSidebar} scrollList={scrollIDs}></Sidebar>
 			)}
 		</React.Fragment>
 	);

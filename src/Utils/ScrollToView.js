@@ -1,4 +1,4 @@
-export default function ScrollToView(scrollToId) {
+export function ScrollToView(scrollToId) {
 	const element = document.getElementById(scrollToId);
 	const offset = 85;
 	const bodyRect = document.body.getBoundingClientRect().top;

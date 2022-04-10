@@ -11,21 +11,21 @@ import Register from "../../Pages/Auth/Register/Register";
 import { Error404 } from "../../Pages";
 
 function App() {
-	const scrollIDs = ["esp", "prof", "cont"];
-	return (
-		<div>
-			<BrowserRouter>
-				<Navbar scrollList={scrollIDs} />
-				<Routes>
-					<Route path="/" exact element={<Homepage> </Homepage>}></Route>
-					<Route path="/ingreso" element={<Login> </Login>}></Route>
-					<Route path="/registro" element={<Register> </Register>}></Route>
-					<Route path="*" element={<Error404></Error404>}></Route>
-				</Routes>
-				<Footer></Footer>
-			</BrowserRouter>
-		</div>
-	);
+	
+		return (
+			<div>
+				<BrowserRouter>
+					<Navbar />
+					<Routes>
+						<Route path="/" exact element={<Homepage> </Homepage>}></Route>
+						<Route path="/ingreso" element={<Login> </Login>}></Route>
+						<Route path="/registro" element={<Register> </Register>}></Route>
+						<Route path="*" element={<Error404></Error404>}></Route>
+					</Routes>
+					<Footer></Footer>
+				</BrowserRouter>
+			</div>
+		);
 }
 
 export default App;

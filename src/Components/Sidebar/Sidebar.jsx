@@ -5,8 +5,7 @@ import { FaTimes } from "react-icons/fa";
 import "./Sidebar.sass";
 import Logox1 from "../../Assets/Logox1.png";
 
-import ScrollToTopOnClick from "../../Utils/ScrollToTopOnClick";
-import { ScrollToView } from "../../Utils";
+import { ScrollToTopOnClick, ScrollToView } from "../../Utils";
 
 const Sidebar = ({ closeFunction, scrollList }) => {
 	return (

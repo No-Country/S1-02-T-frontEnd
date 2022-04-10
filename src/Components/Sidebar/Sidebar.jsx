@@ -90,7 +90,7 @@ const Sidebar = ({ closeFunction, scrollList }) => {
 						<div className="side-links">
 							<li className="side-link">
 								<Link
-									to="/"
+									to="/ingreso"
 									onClick={() => {
 										ScrollToTopOnClick();
 										closeFunction();
@@ -101,7 +101,7 @@ const Sidebar = ({ closeFunction, scrollList }) => {
 							</li>
 							<li className="side-link">
 								<Link
-									to="/"
+									to="/registro"
 									onClick={() => {
 										ScrollToTopOnClick();
 										closeFunction();

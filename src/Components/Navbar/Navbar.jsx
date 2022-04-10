@@ -68,7 +68,7 @@ const Navbar = ({ scrollList }) => {
 						</li>
 						<li className="nav-link">
 							<Link
-								to="/"
+								to="/ingreso"
 								onClick={() => {
 									ScrollToTopOnClick();
 								}}
@@ -78,7 +78,7 @@ const Navbar = ({ scrollList }) => {
 						</li>
 						<li className="nav-link">
 							<Link
-								to="/"
+								to="/registro"
 								onClick={() => {
 									ScrollToTopOnClick();
 								}}

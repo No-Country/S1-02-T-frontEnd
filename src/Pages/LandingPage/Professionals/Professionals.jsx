@@ -2,6 +2,8 @@ import React from "react";
 import "./Professionals.sass";
 
 import { useProfessionalsContext } from "../../../Context/professionals_context";
+import Loading from "../../../Components/Loading/Loading";
+import Error from "../../../Components/Error/Error";
 
 import { bannerImageUrl } from "../../../Utils/constants";
 
@@ -13,6 +15,12 @@ const Professionals = () => {
 		professionals,
 	} = useProfessionalsContext();
 
+	if (isLoading) {
+		return <Loading></Loading>;
+	}
+	if (error) {
+		return <Error></Error>;
+	}
 	return (
 		<section className="section" id="esp">
 			<div className="section-center">

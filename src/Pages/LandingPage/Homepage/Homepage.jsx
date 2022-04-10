@@ -5,7 +5,7 @@ import Banner from "../Banner/Banner";
 import Professionals from "../Professionals/Professionals";
 import Professions from "../Professions/Professions";
 import CallToAction from "../CallToAction/CallToAction";
-import { Services, Services2 } from "../Services";
+import { Services2 } from "../Services";
 import Contacto from "../Contacto/Contacto";
 import Estadisticas from "../Estadisticas/Estadisticas";
 
@@ -23,7 +23,6 @@ const Homepage = () => {
 			<ProfessionsProvider>
 				<Professions></Professions>
 			</ProfessionsProvider>
-			{/* <Services></Services> */}
 			<Estadisticas></Estadisticas>
 			<CallToAction></CallToAction>
 			<Contacto></Contacto>

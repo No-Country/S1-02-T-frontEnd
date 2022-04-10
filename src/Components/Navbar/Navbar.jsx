@@ -6,9 +6,9 @@ import "./Navbar.sass";
 import Logox1 from "../../Assets/Logox1.png";
 import Sidebar from "../Sidebar/Sidebar";
 
-import ScrollToTopOnClick from "../../Utils/ScrollToTopOnClick";
+import { ScrollToTopOnClick, ScrollToView } from "../../Utils";
 
-const Navbar = () => {
+const Navbar = ({ scrollList }) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const openSidebar = () => {
@@ -40,25 +40,58 @@ const Navbar = () => {
 						<AiOutlineMenu></AiOutlineMenu>
 					</div>
 					<ul className="nav-right">
-						<Link to="/" className="nav-link">
+						<li
+							onClick={() => {
+								ScrollToView(scrollList[0]);
+							}}
+							className="nav-link"
+						>
 							Nuestros Especialistas
-						</Link>
-						<Link to="/" className="nav-link">
-							Blog
-						</Link>
-						<Link to="/" className="nav-link">
+						</li>
+						<li className="nav-link">
+							<Link
+								to="/"
+								onClick={() => {
+									ScrollToTopOnClick();
+								}}
+							>
+								Blog
+							</Link>
+						</li>
+						<li
+							onClick={() => {
+								ScrollToView(scrollList[2]);
+							}}
+							className="nav-link"
+						>
 							Contacto
-						</Link>
-						<Link to="/" className="nav-link">
-							Acceder
-						</Link>
-						<Link to="/" className="nav-link">
-							Registro
-						</Link>
+						</li>
+						<li className="nav-link">
+							<Link
+								to="/"
+								onClick={() => {
+									ScrollToTopOnClick();
+								}}
+							>
+								Acceder
+							</Link>
+						</li>
+						<li className="nav-link">
+							<Link
+								to="/"
+								onClick={() => {
+									ScrollToTopOnClick();
+								}}
+							>
+								Registro
+							</Link>
+						</li>
 					</ul>
 				</div>
 			</nav>
-			{isOpen && <Sidebar closeFunction={closeSidebar}></Sidebar>}
+			{isOpen && (
+				<Sidebar closeFunction={closeSidebar} scrollList={scrollList}></Sidebar>
+			)}
 		</React.Fragment>
 	);
 };

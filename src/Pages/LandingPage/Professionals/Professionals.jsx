@@ -14,7 +14,7 @@ const Professionals = () => {
 	} = useProfessionalsContext();
 
 	return (
-		<section className="section">
+		<section className="section" id="esp">
 			<div className="section-center">
 				<div className="section-title">
 					<span>Cuerpo</span>

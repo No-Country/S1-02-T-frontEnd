@@ -1,16 +1,20 @@
 import React from 'react'
 import './Registro.scss'
+import logoInicio from "../../img/iconoCiudadanos.png"
+import { apiBaseUrl } from '../../Utils/constants'
 
 
 
 export const Registro = () => {
+
+
   return (
     <div>
         <div>
         
         <div className="container">
           <div className="img">
-            <img src="" alt="img login" />
+            <img src={logoInicio}alt="img login" />
           </div>
           <div className="login-content">
             <form action="index.html">
@@ -52,7 +56,7 @@ export const Registro = () => {
                   <input type="password" className="input" />
                 </div>
               </div>
-              <input type="text" className="btn" defaultValue="Login" />
+              <button type="text" className="btn" defaultValue="Login">Enviar</button>
             </form>
           </div>
         </div>

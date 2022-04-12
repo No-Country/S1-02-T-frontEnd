@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import authService from "../../Services/auth.service";
 
 import "./App.sass";
 
@@ -8,10 +9,16 @@ import Footer from "../Footer/Footer";
 import Homepage from "../../Pages/LandingPage/Homepage/Homepage";
 import Login from "../../Pages/Auth/Login/Login";
 import Register from "../../Pages/Auth/Register/Register";
+import PatientDashboard from "../../Pages/Plataform/Patient/PatientDashboard";
 import { Error404 } from "../../Pages";
 
 function App() {
-	
+	const [myUser, setMyUser] = useState(null);
+	useEffect(() => {
+		setMyUser(authService.getCurrentUser());
+	}, []);
+
+	if (!myUser) {
 		return (
 			<div>
 				<BrowserRouter>
@@ -26,6 +33,21 @@ function App() {
 				</BrowserRouter>
 			</div>
 		);
+	} else {
+		return (
+			<div>
+				<BrowserRouter>
+					<Routes>
+						<Route
+							path="/user-dashboard"
+							element={<PatientDashboard> </PatientDashboard>}
+						></Route>
+						<Route path="*" element={<Error404></Error404>}></Route>
+					</Routes>
+				</BrowserRouter>
+			</div>
+		);
+	}
 }
 
 export default App;

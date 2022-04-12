@@ -6,18 +6,13 @@ class AuthService {
 
 	// === Login ===
 	login(email, password) {
-		return axios.post(apiBaseUrl + "/auth/login", { email, password }).then(
-			(response) => {
+		return axios
+			.post(apiBaseUrl + "/auth/login", { email, password })
+			.then((response) => {
 				if (response.data.token) {
 					localStorage.setItem("user", JSON.stringify(response.data));
 				}
-			},
-			(error) => {
-				const myErr = error.response.data;
-				console.log(myErr.error);
-				console.log(myErr.status);
-			}
-		);
+			});
 	}
 
 	// === Logout ===

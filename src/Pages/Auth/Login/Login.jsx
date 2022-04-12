@@ -1,10 +1,7 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import authService from "../../../Services/auth.service";
 import "./Login.sass";
-
-import { apiBaseUrl } from "../../../Utils/constants";
 
 const Login = () => {
 	let navigate = useNavigate();
@@ -24,26 +21,17 @@ const Login = () => {
 	// onSubmit:
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		authService.login(email, password);
-	};
-
-	// POST:
-	const postLogin = (email, password) => {
-		return axios
-			.post(apiBaseUrl + "/auth/login", {
-				email,
-				password,
-			})
-			.then(
-				(response) => {
-					console.log(response);
-				},
-				(error) => {
-					const myErr = error.response.data;
-					console.log(myErr.error);
-					console.log(myErr.status);
-				}
-			);
+		authService.login(email, password).then(
+			() => {
+				window.location.reload();
+				navigate("/user-dashboard");
+			},
+			(error) => {
+				const myErr = error.response.data;
+				console.log(myErr.error);
+				console.log(myErr.status);
+			}
+		);
 	};
 
 	return (

@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import authService from "../../../Services/auth.service";
 import "./Login.sass";
 
 import { apiBaseUrl } from "../../../Utils/constants";
@@ -23,7 +24,7 @@ const Login = () => {
 	// onSubmit:
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		postLogin(email, password);
+		authService.login(email, password);
 	};
 
 	// POST:

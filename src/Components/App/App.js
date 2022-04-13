@@ -13,41 +13,24 @@ import PatientDashboard from "../../Pages/Plataform/Patient/PatientDashboard";
 import { Error404 } from "../../Pages";
 
 function App() {
-	const [myUser, setMyUser] = useState(null);
-	useEffect(() => {
-		setMyUser(authService.getCurrentUser());
-	}, []);
-
-	if (!myUser) {
-		return (
-			<div>
-				<BrowserRouter>
-					<Navbar />
-					<Routes>
-						<Route path="/" exact element={<Homepage> </Homepage>}></Route>
-						<Route path="/ingreso" element={<Login> </Login>}></Route>
-						<Route path="/registro" element={<Register> </Register>}></Route>
-						<Route path="*" element={<Error404></Error404>}></Route>
-					</Routes>
-					<Footer></Footer>
-				</BrowserRouter>
-			</div>
-		);
-	} else {
-		return (
-			<div>
-				<BrowserRouter>
-					<Routes>
-						<Route
-							path="/user-dashboard"
-							element={<PatientDashboard> </PatientDashboard>}
-						></Route>
-						<Route path="*" element={<Error404></Error404>}></Route>
-					</Routes>
-				</BrowserRouter>
-			</div>
-		);
-	}
+	return (
+		<div>
+			<BrowserRouter>
+				<Navbar />
+				<Routes>
+					<Route path="/" exact element={<Homepage> </Homepage>}></Route>
+					<Route path="/ingreso" element={<Login> </Login>}></Route>
+					<Route path="/registro" element={<Register> </Register>}></Route>
+					<Route
+						path="/user-dashboard"
+						element={<PatientDashboard> </PatientDashboard>}
+					></Route>
+					<Route path="*" element={<Error404></Error404>}></Route>
+				</Routes>
+				<Footer></Footer>
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;

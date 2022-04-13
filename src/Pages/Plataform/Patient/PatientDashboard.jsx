@@ -15,8 +15,9 @@ const PatientDashboard = () => {
 	}, []);
 
 	const handleLogout = () => {
-		navigate("/");
 		authService.logout();
+		navigate("/");
+		window.location.reload();
 	};
 
 	return (

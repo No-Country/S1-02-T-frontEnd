@@ -23,8 +23,8 @@ const Login = () => {
 		e.preventDefault();
 		authService.login(email, password).then(
 			() => {
-				window.location.reload();
 				navigate("/user-dashboard");
+				window.location.reload();
 			},
 			(error) => {
 				const myErr = error.response.data;

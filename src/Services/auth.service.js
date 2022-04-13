@@ -10,7 +10,15 @@ class AuthService {
 			"user",
 			new Blob([JSON.stringify(form.user)], { type: "application/json" })
 		);
-		userFormData.append("image", form.image);
+		if (form.image === undefined) {
+			userFormData.append(
+				"image",
+				new Blob([form.image], { type: "form-data" })
+			);
+		} else {
+			userFormData.append("image", form.image);
+		}
+		new Response(userFormData).text().then(console.log); // To see the entire raw body
 		return axios
 			.post(apiBaseUrl + "/auth/register", userFormData, {
 				headers: {

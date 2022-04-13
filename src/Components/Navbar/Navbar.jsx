@@ -21,15 +21,16 @@ const Navbar = () => {
 
 	useEffect(() => {
 		const user = authService.getCurrentUser();
+
 		if (user) {
 			setCurrentUser(user);
-			if (user.roleName[0].authority === "ROLE_USER") {
+			if (user.roles[0].name === "ROLE_PATIENT") {
 				setShowPatientBoard(true);
 			}
-			if (user.roleName[0].authority === "ROLE_PROFESSIONAL") {
+			if (user.roles[0].name === "ROLE_PROFESSIONAL") {
 				setShowProfessionalBoard(true);
 			}
-			if (user.roleName[0].authority === "ROLE_ADMIN") {
+			if (user.roles[0].name === "ROLE_ADMIN") {
 				setShowAdminBoard(true);
 			}
 		}

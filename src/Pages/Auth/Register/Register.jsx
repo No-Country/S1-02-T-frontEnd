@@ -25,9 +25,7 @@ const Register = () => {
 	const handleData = (e) => {
 		const newData = { ...data };
 		newData.user[e.target.id] = e.target.value;
-		const elementWithImage = document.getElementById("image");
-		const file = elementWithImage.files[0];
-		newData.image = file;
+		newData.image = document.getElementById("image").files[0];
 		setData(newData);
 	};
 
@@ -35,8 +33,9 @@ const Register = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		authService.register(data).then(
-			(response) => {
-				console.log(response);
+			() => {
+				navigate("/dashboard");
+				window.location.reload();
 			},
 			(error) => {
 				console.log(error);

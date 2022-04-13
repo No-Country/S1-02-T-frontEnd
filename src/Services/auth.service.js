@@ -5,29 +5,23 @@ class AuthService {
 	// === Register ===
 	register(form) {
 		delete form.user["image"];
-
-		console.log(form.user);
-		console.log(form.image);
-
 		var userFormData = new FormData();
-
 		userFormData.append(
 			"user",
-			new Blob([form.user], { type: "application/json" })
+			new Blob([JSON.stringify(form.user)], { type: "application/json" })
 		);
-		if (form.image) {
-			userFormData.append("image", form.image, form.image.name);
-		} else {
-			userFormData.append("image", null);
-		}
-		// Display the key/value pairs
-		new Response(userFormData).text().then(console.log); // To see the entire raw body
-
-		return axios.post(apiBaseUrl + "/auth/register", userFormData, {
-			headers: {
-				"Content-Type": "multipart/form-data",
-			},
-		});
+		userFormData.append("image", form.image);
+		return axios
+			.post(apiBaseUrl + "/auth/register", userFormData, {
+				headers: {
+					"Content-Type": "multipart/form-data",
+				},
+			})
+			.then((response) => {
+				if (response.data.token) {
+					localStorage.setItem("user", JSON.stringify(response.data));
+				}
+			});
 	}
 
 	// === Login ===

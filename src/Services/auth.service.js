@@ -4,27 +4,29 @@ import { apiBaseUrl } from "../Utils/constants";
 class AuthService {
 	// === Register ===
 	register(form) {
-		const {
-			email,
-			password,
-			first_name,
-			last_name,
-			dni,
-			image_url,
-			country,
-			province,
-			city,
-		} = form;
-		return axios.post(apiBaseUrl + "/auth/register", {
-			email,
-			password,
-			first_name,
-			last_name,
-			dni,
-			image_url,
-			country,
-			province,
-			city,
+		delete form.user["image"];
+
+		console.log(form.user);
+		console.log(form.image);
+
+		var userFormData = new FormData();
+
+		userFormData.append(
+			"user",
+			new Blob([form.user], { type: "application/json" })
+		);
+		if (form.image) {
+			userFormData.append("image", form.image, form.image.name);
+		} else {
+			userFormData.append("image", null);
+		}
+		// Display the key/value pairs
+		new Response(userFormData).text().then(console.log); // To see the entire raw body
+
+		return axios.post(apiBaseUrl + "/auth/register", userFormData, {
+			headers: {
+				"Content-Type": "multipart/form-data",
+			},
 		});
 	}
 

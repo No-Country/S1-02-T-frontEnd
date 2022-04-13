@@ -7,21 +7,27 @@ import authService from "../../../Services/auth.service";
 const Register = () => {
 	let navigate = useNavigate();
 	const [data, setData] = useState({
-		email: "",
-		password: "",
-		first_name: "",
-		last_name: "",
-		dni: 0,
-		image_url: "",
-		country: "",
-		province: "",
-		city: "",
+		user: {
+			email: "",
+			password: "",
+			first_name: "",
+			last_name: "",
+			age: 0,
+			dni: "",
+			country: "",
+			province: "",
+			city: "",
+		},
+		image: {},
 	});
 
 	// Handle Data:
 	const handleData = (e) => {
 		const newData = { ...data };
-		newData[e.target.id] = e.target.value;
+		newData.user[e.target.id] = e.target.value;
+		const elementWithImage = document.getElementById("image");
+		const file = elementWithImage.files[0];
+		newData.image = file;
 		setData(newData);
 	};
 
@@ -55,7 +61,7 @@ const Register = () => {
 							name="username"
 							placeholder="E-mail"
 							id="email"
-							value={data.email}
+							value={data.user.email}
 							onChange={(e) => {
 								handleData(e);
 							}}
@@ -68,8 +74,21 @@ const Register = () => {
 							type="text"
 							name="password"
 							placeholder="Ingrese su contraseña"
-							value={data.password}
+							value={data.user.password}
 							id="password"
+							onChange={(e) => {
+								handleData(e);
+							}}
+						/>
+					</div>
+					{/* FOTO */}
+					<div className="file-input">
+						<label htmlFor="password">Foto De Perfil</label>
+						<input
+							type="file"
+							name="image"
+							placeholder="Ingrese su contraseña"
+							id="image"
 							onChange={(e) => {
 								handleData(e);
 							}}
@@ -82,7 +101,7 @@ const Register = () => {
 							type="text"
 							name="first_name"
 							placeholder="Ej: Cosme"
-							value={data.first_name}
+							value={data.user.first_name}
 							id="first_name"
 							onChange={(e) => {
 								handleData(e);
@@ -96,7 +115,7 @@ const Register = () => {
 							type="text"
 							name="last_name"
 							placeholder="Ej: Fulanito"
-							value={data.last_name}
+							value={data.user.last_name}
 							id="last_name"
 							onChange={(e) => {
 								handleData(e);
@@ -110,49 +129,63 @@ const Register = () => {
 							type="text"
 							name="dni"
 							placeholder="Ej: 35000000"
-							value={data.dni}
+							value={data.user.dni}
 							id="dni"
 							onChange={(e) => {
 								handleData(e);
 							}}
 						/>
 					</div>
-					{/* DNI */}
+					{/* Age */}
+					<div className="single-input">
+						<label htmlFor="dni">Edad</label>
+						<input
+							type="number"
+							name="age"
+							placeholder="Ej: 38"
+							value={data.user.age}
+							id="age"
+							onChange={(e) => {
+								handleData(e);
+							}}
+						/>
+					</div>
+					{/* Country */}
 					<div className="single-input">
 						<label htmlFor="country">Pais</label>
 						<input
 							type="text"
 							name="country"
 							placeholder="Ej: Argentina"
-							value={data.country}
+							value={data.user.country}
 							id="country"
 							onChange={(e) => {
 								handleData(e);
 							}}
 						/>
 					</div>
-					{/* DNI */}
+					{/* Province */}
 					<div className="single-input">
 						<label htmlFor="province">Provincia</label>
 						<input
 							type="text"
 							name="province"
 							placeholder="Ej: Buenos Aires"
-							value={data.province}
+							value={data.user.province}
 							id="province"
 							onChange={(e) => {
 								handleData(e);
 							}}
 						/>
 					</div>
-					{/* DNI */}
+					{/* City */}
 					<div className="single-input">
 						<label htmlFor="city">Ciudad</label>
 						<input
 							type="text"
 							name="city"
 							placeholder="Ej: Olivos"
-							value={data.city}
+							value={data.user.city}
 							id="city"
 							onChange={(e) => {
 								handleData(e);

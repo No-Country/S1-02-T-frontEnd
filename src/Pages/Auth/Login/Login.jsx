@@ -1,7 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState} from "react";
 import { useNavigate } from "react-router-dom";
-import authService from "../../../Services/auth.service";
+
 import "./Login.sass";
+import authService from "../../../Services/auth.service";
 
 const Login = () => {
 	let navigate = useNavigate();
@@ -38,23 +39,35 @@ const Login = () => {
 		<section className="section page-sect">
 			<div className="section-center">
 				<div className="section-title">
-					<h2>Login</h2>
+					<span>Nuestra Plataforma</span>
+					<h2>Ingreso</h2>
 				</div>
 				<div className="form-container">
 					<form onSubmit={handleSubmit} className="login-form">
-						<input
-							type="text"
-							name="username"
-							value={email}
-							onChange={onChangeUsername}
-						/>
-						<input
-							type="text"
-							name="password"
-							value={password}
-							onChange={onChangePassword}
-						/>
-						<button type="submit"> Enviar</button>
+						<div className="single-input">
+							<label htmlFor="username">Email</label>
+							<input
+								type="text"
+								name="username"
+								placeholder="E-mail"
+								value={email}
+								onChange={onChangeUsername}
+							/>
+						</div>
+						<div className="single-input">
+							<label htmlFor="password">Contraseña</label>
+							<input
+								type="text"
+								name="password"
+								placeholder="Ingrese su contraseña"
+								value={password}
+								onChange={onChangePassword}
+							/>
+						</div>
+						<button type="submit" className="btn-pastel">
+							{" "}
+							Enviar
+						</button>
 					</form>
 				</div>
 			</div>

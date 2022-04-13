@@ -3,6 +3,30 @@ import { apiBaseUrl } from "../Utils/constants";
 
 class AuthService {
 	// === Register ===
+	register(form) {
+		const {
+			email,
+			password,
+			first_name,
+			last_name,
+			dni,
+			image_url,
+			country,
+			province,
+			city,
+		} = form;
+		return axios.post(apiBaseUrl + "/auth/register", {
+			email,
+			password,
+			first_name,
+			last_name,
+			dni,
+			image_url,
+			country,
+			province,
+			city,
+		});
+	}
 
 	// === Login ===
 	login(email, password) {

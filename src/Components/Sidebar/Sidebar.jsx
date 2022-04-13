@@ -130,59 +130,7 @@ const Sidebar = ({
 							</div>
 						</div>
 					</div>
-				)}
-				{/* PATIENT SIDE */}
-				{showPatientBoard && (
-					<div className="side-bot">
-						<div className="side-section">
-							<h2>Explorar</h2>
-							<hr />
-							<div className="side-links">
-								<li
-									className="side-link"
-									onClick={() => {
-										ScrollToTopOnClick();
-										closeFunction();
-									}}
-								>
-									Mi Perfil
-								</li>
-								<li
-									className="side-link"
-									onClick={() => {
-										ScrollToView(scrollList[0]);
-										closeFunction();
-									}}
-								>
-									Mis Doctores
-								</li>
-								<li
-									className="side-link"
-									onClick={() => {
-										ScrollToView(scrollList[1]);
-										closeFunction();
-									}}
-								>
-									Mis Turnos
-								</li>
-								<li className="side-link">
-									<Link
-										to="/"
-										onClick={() => {
-											ScrollToTopOnClick();
-											closeFunction();
-										}}
-									>
-										Historial Clinico
-									</Link>
-								</li>
-								<li className="side-link" onClick={handleLogout}>
-									Salir
-								</li>
-							</div>
-						</div>
-					</div>
-				)}
+				)}				
 				{/* PATIENT SIDE */}
 				{showPatientBoard && (
 					<div className="side-bot">

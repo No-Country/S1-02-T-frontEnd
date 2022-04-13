@@ -23,7 +23,7 @@ const Login = () => {
 		e.preventDefault();
 		authService.login(email, password).then(
 			() => {
-				navigate("/user-dashboard");
+				navigate("/dashboard");
 				window.location.reload();
 			},
 			(error) => {

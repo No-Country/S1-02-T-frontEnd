@@ -1,7 +1,7 @@
-import { getCurrentUser } from "./auth.service";
+import authService from "./auth.service";
 
 export default function authHeader() {
-	const user = getCurrentUser();
+	const user = authService.getCurrentUser();
 	if (user && user.token) {
 		return {
 			Authorization: user.token,

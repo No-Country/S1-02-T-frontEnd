@@ -25,8 +25,8 @@ export const Registro = () => {
                   <i className="fas fa-user" />
                 </div>
                 <div className="div">
-                  <h5>Nombre</h5>
-                  <input type="text" className="input" />
+                  
+                  <input type="text" className="input" placeholder="Nombre" />
                 </div>
               </div>
               <div className="input-div one">
@@ -34,8 +34,8 @@ export const Registro = () => {
                   <i className="fas fa-user" />
                 </div>
                 <div className="div">
-                  <h5>Apellido</h5>
-                  <input type="text" className="input" />
+                  
+                  <input type="text" className="input" placeholder="Apellido" />
                 </div>
               </div>
               <div className="input-div one">
@@ -43,8 +43,8 @@ export const Registro = () => {
                   <i className="fas fa-user" />
                 </div>
                 <div className="div">
-                  <h5>Email</h5>
-                  <input type="email" className="input" />
+                  
+                  <input type="email" className="input" placeholder="Correo" />
                 </div>
               </div>
               <div className="input-div pass">
@@ -52,8 +52,8 @@ export const Registro = () => {
                   <i className="fas fa-lock" />
                 </div>
                 <div className="div">
-                  <h5>Contraseña</h5>
-                  <input type="password" className="input" />
+                  
+                  <input type="password" className="input" placeholder="contrasena" />
                 </div>
               </div>
               <button type="text" className="btn" defaultValue="Login">Enviar</button>

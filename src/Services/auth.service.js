@@ -18,7 +18,7 @@ class AuthService {
 		} else {
 			userFormData.append("image", form.image);
 		}
-		new Response(userFormData).text().then(console.log); // To see the entire raw body
+		// new Response(userFormData).text().then(console.log); // To see the entire raw body
 		return axios
 			.post(apiBaseUrl + "/auth/register", userFormData, {
 				headers: {

@@ -130,7 +130,7 @@ const Sidebar = ({
 							</div>
 						</div>
 					</div>
-				)}				
+				)}
 				{/* PATIENT SIDE */}
 				{showPatientBoard && (
 					<div className="side-bot">
@@ -145,36 +145,34 @@ const Sidebar = ({
 										closeFunction();
 									}}
 								>
-									Mi Perfil
+									<Link to="/">Mi Perfil</Link>
 								</li>
 								<li
 									className="side-link"
 									onClick={() => {
-										ScrollToView(scrollList[0]);
+										ScrollToTopOnClick();
 										closeFunction();
 									}}
 								>
-									Mis Doctores
+									<Link to="/pat/mis-doctores">Mis Doctores</Link>
 								</li>
 								<li
 									className="side-link"
 									onClick={() => {
-										ScrollToView(scrollList[1]);
+										ScrollToTopOnClick();
 										closeFunction();
 									}}
 								>
-									Mis Turnos
+									<Link to="/pat/mis-turnos">Mis Turnos</Link>
 								</li>
-								<li className="side-link">
-									<Link
-										to="/"
-										onClick={() => {
-											ScrollToTopOnClick();
-											closeFunction();
-										}}
-									>
-										Historial Clinico
-									</Link>
+								<li
+									className="side-link"
+									onClick={() => {
+										ScrollToTopOnClick();
+										closeFunction();
+									}}
+								>
+									<Link to="/pat/historial">Historial Clinico</Link>
 								</li>
 								<li className="side-link" onClick={handleLogout}>
 									Salir
@@ -197,36 +195,34 @@ const Sidebar = ({
 										closeFunction();
 									}}
 								>
-									Mi Perfil
+									<Link to="/">Mi Perfil</Link>
 								</li>
 								<li
 									className="side-link"
 									onClick={() => {
-										ScrollToView(scrollList[0]);
+										ScrollToTopOnClick();
 										closeFunction();
 									}}
 								>
-									Mis Agenda
+									<Link to="/prof/mi-agenda">Mi Agenda</Link>
 								</li>
 								<li
 									className="side-link"
 									onClick={() => {
-										ScrollToView(scrollList[1]);
+										ScrollToTopOnClick();
 										closeFunction();
 									}}
 								>
-									Mis Pacientes
+									<Link to="/prof/mis-pacientes">Mis Pacientes</Link>
 								</li>
-								<li className="side-link">
-									<Link
-										to="/"
-										onClick={() => {
-											ScrollToTopOnClick();
-											closeFunction();
-										}}
-									>
-										QR Historial Clinico
-									</Link>
+								<li
+									className="side-link"
+									onClick={() => {
+										ScrollToTopOnClick();
+										closeFunction();
+									}}
+								>
+									<Link to="/prof/ver-historiales">QR Historial Clinico</Link>
 								</li>
 								<li className="side-link" onClick={handleLogout}>
 									Salir
@@ -249,16 +245,25 @@ const Sidebar = ({
 										closeFunction();
 									}}
 								>
-									Usuarios
+									<Link to="/">Mi Perfil</Link>
 								</li>
 								<li
 									className="side-link"
 									onClick={() => {
-										ScrollToView(scrollList[0]);
+										ScrollToTopOnClick();
 										closeFunction();
 									}}
 								>
-									Profesionales
+									<Link to="/adm/usuarios-list">Usuarios</Link>
+								</li>
+								<li
+									className="side-link"
+									onClick={() => {
+										ScrollToTopOnClick();
+										closeFunction();
+									}}
+								>
+									<Link to="/adm/profesionales-list">Profesionales</Link>
 								</li>
 
 								<li className="side-link" onClick={handleLogout}>

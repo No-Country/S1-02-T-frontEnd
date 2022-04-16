@@ -24,14 +24,34 @@ const Navbar = () => {
 
 		if (user) {
 			setCurrentUser(user);
-			if (user.roles[0].name === "ROLE_PATIENT") {
-				setShowPatientBoard(true);
+			if (user.roles) {
+				let myRoles = user.roles;
+				myRoles.map((role) => {
+					if (role.name === "ROLE_PATIENT") {
+						setShowPatientBoard(true);
+					}
+					if (role.name === "ROLE_PROFESSIONAL") {
+						setShowProfessionalBoard(true);
+					}
+					if (role.name === "ROLE_ADMIN") {
+						setShowAdminBoard(true);
+					}
+				});
 			}
-			if (user.roles[0].name === "ROLE_PROFESSIONAL") {
-				setShowProfessionalBoard(true);
-			}
-			if (user.roles[0].name === "ROLE_ADMIN") {
-				setShowAdminBoard(true);
+
+			if (user.roleName) {
+				let myRoles = user.roleName;
+				myRoles.map((role) => {
+					if (role.authority === "ROLE_PATIENT") {
+						setShowPatientBoard(true);
+					}
+					if (role.authority === "ROLE_PROFESSIONAL") {
+						setShowProfessionalBoard(true);
+					}
+					if (role.authority === "ROLE_ADMIN") {
+						setShowAdminBoard(true);
+					}
+				});
 			}
 		}
 	}, []);
@@ -71,6 +91,7 @@ const Navbar = () => {
 					>
 						<AiOutlineMenu></AiOutlineMenu>
 					</div>
+
 					{/* PUBLIC Bar */}
 					{!currentUser && (
 						<ul className="nav-right">
@@ -122,22 +143,33 @@ const Navbar = () => {
 							</li>
 						</ul>
 					)}
+
 					{/* PATIENT Bar */}
 					{showPatientBoard && (
 						<ul className="nav-right">
 							<li onClick={() => {}} className="nav-link">
-								Mi Perfil
+								<Link to="/">Mi Perfil</Link>
 							</li>
 							<li className="nav-link">
-								<Link to="/" onClick={() => {}}>
+								<Link
+									to="/pat/mis-turnos"
+									onClick={() => {
+										ScrollToTopOnClick();
+									}}
+								>
 									Mis Turnos
 								</Link>
 							</li>
 							<li onClick={() => {}} className="nav-link">
-								Mis Doctores
+								<Link to="/pat/mis-doctores">Mis Doctores</Link>
 							</li>
 							<li className="nav-link">
-								<Link to="/ingreso" onClick={() => {}}>
+								<Link
+									to="/pat/historial"
+									onClick={() => {
+										ScrollToTopOnClick();
+									}}
+								>
 									Historial Clinico
 								</Link>
 							</li>
@@ -150,18 +182,35 @@ const Navbar = () => {
 					{showProfessionalBoard && (
 						<ul className="nav-right">
 							<li onClick={() => {}} className="nav-link">
-								Mi Perfil
+								<Link to="/">Mi Perfil</Link>
 							</li>
 							<li className="nav-link">
-								<Link to="/" onClick={() => {}}>
+								<Link
+									to="/prof/mi-agenda"
+									onClick={() => {
+										ScrollToTopOnClick();
+									}}
+								>
 									Mi Agenda
 								</Link>
 							</li>
 							<li onClick={() => {}} className="nav-link">
-								Mis Pacientes
+								<Link
+									to="/prof/mis-pacientes"
+									onClick={() => {
+										ScrollToTopOnClick();
+									}}
+								>
+									Mis Pacientes
+								</Link>
 							</li>
 							<li className="nav-link">
-								<Link to="/ingreso" onClick={() => {}}>
+								<Link
+									to="/prof/ver-historiales"
+									onClick={() => {
+										ScrollToTopOnClick();
+									}}
+								>
 									QR Historial Clinico
 								</Link>
 							</li>
@@ -170,14 +219,30 @@ const Navbar = () => {
 							</li>
 						</ul>
 					)}
+
 					{/* ADMIN Bar */}
 					{showAdminBoard && (
 						<ul className="nav-right">
 							<li onClick={() => {}} className="nav-link">
-								Usuarios
+								<Link to="/">Mi Perfil</Link>
+							</li>
+							<li onClick={() => {}} className="nav-link">
+								<Link
+									to="/adm/usuarios-list"
+									onClick={() => {
+										ScrollToTopOnClick();
+									}}
+								>
+									Usuarios
+								</Link>
 							</li>
 							<li className="nav-link">
-								<Link to="/" onClick={() => {}}>
+								<Link
+									to="/adm/profesionales-list"
+									onClick={() => {
+										ScrollToTopOnClick();
+									}}
+								>
 									Profesionales
 								</Link>
 							</li>

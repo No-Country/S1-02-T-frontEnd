@@ -8,6 +8,7 @@ import authService from "../../../Services/auth.service";
 const Register = () => {
 	let navigate = useNavigate();
 	const [isProf, setIsProf] = useState(false);
+	const [fileName, setFileName] = useState(null);
 	const [data, setData] = useState({
 		user: {
 			email: "",
@@ -31,6 +32,17 @@ const Register = () => {
 		setData(newData);
 	};
 
+	const handleProf = () => {
+		setIsProf(!isProf);
+	};
+
+	// FileInput:
+	const handleFileName = (e) => {
+		const image = document.getElementById("image").files[0];
+		if (image.name) {
+			setFileName(image.name);
+		}
+	};
 	// onSubmit:
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -53,6 +65,11 @@ const Register = () => {
 				</div>
 			</div>
 			<div className="form-container">
+				<div className="isProfesional">
+					<input type="checkbox" name="isProf" onChange={handleProf} />
+					<label htmlFor="isProf">Eres Profesional?</label>
+					{isProf && <h2>Hola</h2>}
+				</div>
 				<form onSubmit={handleSubmit} className="register-form">
 					{/* === CUENTA === */}
 					<div className="input-block">
@@ -89,18 +106,19 @@ const Register = () => {
 					<div className="input-block">
 						{/* FOTO */}
 						<div>
-							<label htmlFor="image" className="file-input">
+							<label htmlFor="image" className="file-input" id="myLabel">
 								<input
 									type="file"
 									name="image"
 									className="custom-file-input"
 									id="image"
 									onChange={(e) => {
+										handleFileName(e);
 										handleData(e);
 									}}
 								/>
+								{fileName ? <span>{fileName}</span> : "Subir Foto"}
 								<AiOutlineCloudUpload id="foto-icon"></AiOutlineCloudUpload>{" "}
-								Subir Foto
 							</label>
 						</div>
 						{/* First_Name */}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Register.sass";
+import { AiOutlineCloudUpload } from "react-icons/ai";
 
 import { useNavigate } from "react-router-dom";
 import authService from "../../../Services/auth.service";
@@ -87,17 +88,20 @@ const Register = () => {
 					{/* === PERSONA === */}
 					<div className="input-block">
 						{/* FOTO */}
-						<div className="file-input">
-							<label htmlFor="password">Foto De Perfil</label>
-							<input
-								type="file"
-								name="image"
-								placeholder="Ingrese su contraseña"
-								id="image"
-								onChange={(e) => {
-									handleData(e);
-								}}
-							/>
+						<div>
+							<label htmlFor="image" className="file-input">
+								<input
+									type="file"
+									name="image"
+									className="custom-file-input"
+									id="image"
+									onChange={(e) => {
+										handleData(e);
+									}}
+								/>
+								<AiOutlineCloudUpload id="foto-icon"></AiOutlineCloudUpload>{" "}
+								Subir Foto
+							</label>
 						</div>
 						{/* First_Name */}
 						<div className="single-input">

@@ -76,6 +76,14 @@ button
                 margin-top: 0.3rem
                 font-size: 2.2rem
                 letter-spacing: 1.2px
+// Page
+.page-sect
+    padding-top: 5.8rem !important
+    min-height: 80vh
+    .section-center
+        .section-title
+            padding-top: 2rem !important
+            padding-bottom: 3rem !important
 
 // Buttons
 .btn-solid
@@ -182,6 +190,33 @@ button
         font-size: 0.9rem
         opacity: 0.75
 
+.file-input
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    height: 3.2rem
+    margin-bottom: 1.3rem
+    border: 1px solid lightgray
+    border-radius: 0.5rem
+    font-size: 1rem
+    color: $color-main-normal
+    cursor: pointer
+    transition: $transition-03
+    input
+        display: none
+    #foto-icon
+        margin-left: 1rem
+        font-size: 2.5rem
+        color: $color-main-normal
+        transition: $transition-03
+    &:hover
+        color: $color-neutral-white
+        background: $color-main-light
+        border: 1px solid $color-main-light
+        #foto-icon
+            color: $color-neutral-white
+
 // === Queries ===
 @media (min-width: 980px)
     .section
@@ -190,6 +225,8 @@ button
         padding-bottom: 7rem !important
         span
             font-size: 1.5rem !important
+    .page-sect
+        padding-top: 6.2rem !important
 
 @media (min-width: 1250px)
     .section-title

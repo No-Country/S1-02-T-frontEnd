@@ -10,7 +10,7 @@ import Homepage from "../../Pages/LandingPage/Homepage/Homepage";
 import Login from "../../Pages/Auth/Login/Login";
 import Register from "../../Pages/Auth/Register/Register";
 import Dashboard from "../../Pages/Plataform/Dashboard/Dashboard";
-import { Error404 } from "../../Pages";
+import { Error404 } from "../../Pages/Error404/Error404";
 import {
 	HistorialClinico,
 	MiAgenda,

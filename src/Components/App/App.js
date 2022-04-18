@@ -11,14 +11,16 @@ import Homepage from "../../Pages/LandingPage/Homepage/Homepage";
 import Error404 from "../../Pages/Error404/Error404";
 
 function App() {
+	const scrollIDs = ["esp", "prof", "cont"];
 	return (
 		<div>
 			<BrowserRouter>
-				<Navbar />
+				<Navbar scrollList={scrollIDs} />
 				<Routes>
 					<Route path="/" exact element={<Homepage></Homepage>}></Route>
 					<Route path="/Login" element={<Login />} />
 					<Route path="/Registro" element={<Registro />} />
+					
 					
 					<Route path="*" element={<Error404></Error404>}></Route>
 				</Routes>

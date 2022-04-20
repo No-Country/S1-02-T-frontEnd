@@ -1,0 +1,38 @@
+.contenedor{
+    height: 698px;
+    width: 1154px;
+    left: 142px;
+    top: 128px;
+    border-radius: 10px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin-left: 15vh;
+
+}
+
+.contenedor1{
+    margin-left: 15vh;
+}
+
+.fecha{
+    color: #F14A16;
+}
+.titulo{
+    margin-top: 10px;
+    padding: 30px;
+    
+}
+
+.card{
+    max-width: 200%;
+    max-height: 200%;
+    padding: 15vh;
+}
+
+.card-img-top{
+    height: 400px;
+    width: 400px;
+}
+

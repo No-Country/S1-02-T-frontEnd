@@ -117,7 +117,7 @@ const Navbar = () => {
 							</li>
 							<li className="nav-link">
 								<Link
-									to="/"
+									to="/blog"
 									onClick={() => {
 										ScrollToTopOnClick();
 									}}

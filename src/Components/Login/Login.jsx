@@ -8,11 +8,12 @@ import authService from '../../Services/auth.service';
 
 
 const Login = () => {
-  let navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  
-  const onChangeUsername = (e) => {
+	let navigate = useNavigate();
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+
+	// Form:
+	const onChangeUsername = (e) => {
 		const email = e.target.value;
 		setEmail(email);
 	};
@@ -20,9 +21,9 @@ const Login = () => {
 		const password = e.target.value;
 		setPassword(password);
 	};
- 
 
-  const handleSubmit = (e) => {
+	// onSubmit:
+	const handleSubmit = (e) => {
 		e.preventDefault();
 		authService.login(email, password).then(
 			() => {
@@ -38,7 +39,6 @@ const Login = () => {
 	};
 
 
-
   return (
     <div>
         <div>
@@ -48,11 +48,11 @@ const Login = () => {
             <img src={logoInicio} alt="img login" />
           </div>
 			<section className="section page-sect">
-					<div className="section-center">
-						<div className="section-title">
-					<span>Nuestra Plataforma</span>
-					<h2>Ingreso</h2>
-						</div>
+				<div className="section-center">
+					<div className="section-title">
+						<span>Nuestra Plataforma</span>
+						<h2>Ingreso</h2>
+					</div>
 					<div className="form-container">
 						<form onSubmit={handleSubmit} className="login-form">
 							<div className="single-input">
@@ -77,7 +77,7 @@ const Login = () => {
 							</div>
 							<button type="submit" className="btn-pastel">
 								{" "}
-								Ingresar
+								Enviar
 							</button>
 						</form>
 					</div>

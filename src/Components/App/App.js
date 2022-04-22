@@ -6,8 +6,6 @@ import "./App.sass";
 
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import Login from "../Login/Login"
-import { Registro } from "../Registro/Registro";
 import Homepage from "../../Pages/LandingPage/Homepage/Homepage";
 import Error404 from "../../Pages/Error404/Error404";
 import Dashboard from "../../Pages/Plataform/Dashboard/Dashboard";
@@ -22,8 +20,8 @@ import ProfesionalesPage from "../../Pages/Plataform/AdminPages/ProfesionalesPag
 import Blog from "../Blog/Blog";
 import BlogArticle from "../Blog/BlogArticle";
 import MiTarjeta from "../../Pages/Plataform/Perfil/MiTarjeta";
-
-
+import Login from "../../Pages/Auth/Login/Login";
+import Register from "../../Pages/Auth/Register/Register";
 
 function App() {
 	const [isLogged, setIsLogged] = useState(false);
@@ -88,11 +86,11 @@ function App() {
 					)}
 					<Route path="/" exact element={<Homepage> </Homepage>}></Route>
 					<Route path="/ingreso" element={<Login> </Login>}></Route>
-					<Route path="/registro" element={<Registro></Registro>}></Route>
+					<Route path="/registro" element={<Register></Register>}></Route>
 					<Route path="/dashboard" element={<Dashboard> </Dashboard>}></Route>
-					<Route path="/blog" element={<Blog />}/>
-					<Route path="/article" element={<BlogArticle  />}/>
-					
+					<Route path="/blog" element={<Blog />} />
+					<Route path="/article" element={<BlogArticle />} />
+
 					<Route path="/miTarjeta" element={<MiTarjeta />} />
 					<Route path="*" element={<Error404></Error404>}></Route>
 				</Routes>

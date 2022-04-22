@@ -18,6 +18,7 @@ const Dashboard = () => {
 	useEffect(() => {
 		userService.getMeData().then(
 			(response) => {
+				console.log(response.data);
 				setMeData(response.data);
 				response.data.roles.map((singleRole) => {
 					if (singleRole.name === "ROLE_PATIENT") {
@@ -96,7 +97,6 @@ const Dashboard = () => {
 							<div>
 								<button className="btn-solid">Agendar Cita</button>
 							</div>
-
 						</article>
 						{/* Facturacion */}
 						<article className="single-block">
@@ -108,13 +108,11 @@ const Dashboard = () => {
 								<td>{state}</td>
 								<td>{price}</td>
 							</tr>
-							
 						</article>
 						{/* Tarjetas */}
 						<article className="single-block">
 							<h2 className="section-title subtitle">Mis Tarjetas</h2>
-								<MiTarjeta />
-
+							<MiTarjeta />
 						</article>
 						{/* Calendar */}
 						<article className="single-block">
@@ -165,28 +163,32 @@ const Dashboard = () => {
 							<div className="data">
 								<h2>{fullName(firt_name, last_name)}</h2>
 								<h3>{fullVivienda(province, country)}</h3>
-								<form className='single-input'>
-                
+								<form className="single-input">
 									<label>Nombre</label>
-									<br/>
+									<br />
 									<input type="text" name="nombre" id="nombre" />
-									<br/>
+									<br />
 									<label>Apellido</label>
-									<br/>
+									<br />
 									<input type="text" name="apellido" id="apellido" />
-									<br/>
+									<br />
 									<label>Ubicación</label>
-									<br/>
-									<input type="text" name="ubicación" id="locacion"/>
-									<br/>
+									<br />
+									<input type="text" name="ubicación" id="locacion" />
+									<br />
 									<label>Email</label>
-									<br/>
-									<input type="email" name="email" id="email"/>
-									<br/>
+									<br />
+									<input type="email" name="email" id="email" />
+									<br />
 									<label>Acerca de tí</label>
-									<br/>
-									<textarea className='single-textarea' name='message' id='message' placeholder='Contanos un poco de vos, tus deseos, tus miedos, que te gusta, que te irrita'></textarea>
-                				</form>
+									<br />
+									<textarea
+										className="single-textarea"
+										name="message"
+										id="message"
+										placeholder="Contanos un poco de vos, tus deseos, tus miedos, que te gusta, que te irrita"
+									></textarea>
+								</form>
 							</div>
 						</div>
 						<hr />

@@ -8,6 +8,7 @@ import Loading from "../../../Components/Loading/Loading";
 
 import authService from "../../../Services/auth.service";
 import userService from "../../../Services/user.service";
+import MiTarjeta from "../Perfil/MiTarjeta";
 
 const Dashboard = () => {
 	let navigate = useNavigate();
@@ -58,6 +59,9 @@ const Dashboard = () => {
 			image_url,
 			firt_name,
 			last_name,
+			date,
+			state,
+			price,
 			dni,
 			age,
 			country,
@@ -86,24 +90,31 @@ const Dashboard = () => {
 						{/* Profesionales */}
 						<article className="single-block">
 							<h2 className="section-title subtitle">Mis Profesionales</h2>
-							<img src={image_url} alt="Profesional perfil"/>
-							<tr>
-								<td>{image_url}</td>
-								<td>{firt_name}</td>
-								<td>{}</td>
-								<td>{}</td>
-								<td>{}</td>
-								<td>{}</td>
-							</tr>
+							<div>
+								<h2>{fullName(firt_name, last_name)}</h2>
+							</div>
+							<div>
+								<button className="btn-solid">Agendar Cita</button>
+							</div>
+
 						</article>
 						{/* Facturacion */}
 						<article className="single-block">
 							<h2 className="section-title subtitle">Mi Facturación</h2>
+							<tr>
+								<td>{image_url}</td>
+								<td>{firt_name}</td>
+								<td>{date}</td>
+								<td>{state}</td>
+								<td>{price}</td>
+							</tr>
 							
 						</article>
 						{/* Tarjetas */}
 						<article className="single-block">
 							<h2 className="section-title subtitle">Mis Tarjetas</h2>
+								<MiTarjeta />
+
 						</article>
 						{/* Calendar */}
 						<article className="single-block">
@@ -154,6 +165,28 @@ const Dashboard = () => {
 							<div className="data">
 								<h2>{fullName(firt_name, last_name)}</h2>
 								<h3>{fullVivienda(province, country)}</h3>
+								<form className='single-input'>
+                
+									<label>Nombre</label>
+									<br/>
+									<input type="text" name="nombre" id="nombre" />
+									<br/>
+									<label>Apellido</label>
+									<br/>
+									<input type="text" name="apellido" id="apellido" />
+									<br/>
+									<label>Ubicación</label>
+									<br/>
+									<input type="text" name="ubicación" id="locacion"/>
+									<br/>
+									<label>Email</label>
+									<br/>
+									<input type="email" name="email" id="email"/>
+									<br/>
+									<label>Acerca de tí</label>
+									<br/>
+									<textarea className='single-textarea' name='message' id='message' placeholder='Contanos un poco de vos, tus deseos, tus miedos, que te gusta, que te irrita'></textarea>
+                				</form>
 							</div>
 						</div>
 						<hr />

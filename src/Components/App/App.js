@@ -20,8 +20,9 @@ import VerHistoriales from "../../Pages/Plataform/ProfessionalPages/VerHistorial
 import UsuariosPage from "../../Pages/Plataform/AdminPages/UsuariosPage";
 import ProfesionalesPage from "../../Pages/Plataform/AdminPages/ProfesionalesPage";
 import Blog from "../Blog/Blog";
-import UserPerfil from "../../User/UserPerfil";
 import BlogArticle from "../Blog/BlogArticle";
+import MiTarjeta from "../../Pages/Plataform/Perfil/MiTarjeta";
+
 
 
 function App() {
@@ -91,7 +92,8 @@ function App() {
 					<Route path="/dashboard" element={<Dashboard> </Dashboard>}></Route>
 					<Route path="/blog" element={<Blog />}/>
 					<Route path="/article" element={<BlogArticle  />}/>
-					<Route path="/perfil" element={<UserPerfil />} />
+					
+					<Route path="/miTarjeta" element={<MiTarjeta />} />
 					<Route path="*" element={<Error404></Error404>}></Route>
 				</Routes>
 				<Footer></Footer>

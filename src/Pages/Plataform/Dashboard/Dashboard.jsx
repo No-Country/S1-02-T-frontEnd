@@ -69,6 +69,8 @@ const Dashboard = () => {
 			city,
 			id,
 		} = meData;
+
+		
 		return (
 			<section className="section page-sect">
 				<div className="section-center">
@@ -102,7 +104,7 @@ const Dashboard = () => {
 						<article className="single-block">
 							<h2 className="section-title subtitle">Mi Facturación</h2>
 							<tr>
-								<td>{image_url}</td>
+								<td>{image_url || profilePlaceholder}</td>
 								<td>{firt_name}</td>
 								<td>{date}</td>
 								<td>{state}</td>

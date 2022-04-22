@@ -5,7 +5,7 @@ import "./Blog.scss"
 const CardsBlog = () => {
   return (
     <div>
-         <div className="card">
+         <div className="card-container">
             <img className="card-img-top" src={cardImg} alt="imagen de card" x="100px" y="100px" />
             <div className="card-body">
                 <h2>Titulo</h2>

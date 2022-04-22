@@ -21,6 +21,7 @@ import UsuariosPage from "../../Pages/Plataform/AdminPages/UsuariosPage";
 import ProfesionalesPage from "../../Pages/Plataform/AdminPages/ProfesionalesPage";
 import Blog from "../Blog/Blog";
 import UserPerfil from "../../User/UserPerfil";
+import BlogArticle from "../Blog/BlogArticle";
 
 
 function App() {
@@ -89,6 +90,7 @@ function App() {
 					<Route path="/registro" element={<Registro></Registro>}></Route>
 					<Route path="/dashboard" element={<Dashboard> </Dashboard>}></Route>
 					<Route path="/blog" element={<Blog />}/>
+					<Route path="/article" element={<BlogArticle  />}/>
 					<Route path="/perfil" element={<UserPerfil />} />
 					<Route path="*" element={<Error404></Error404>}></Route>
 				</Routes>

@@ -86,10 +86,20 @@ const Dashboard = () => {
 						{/* Profesionales */}
 						<article className="single-block">
 							<h2 className="section-title subtitle">Mis Profesionales</h2>
+							<img src={image_url} alt="Profesional perfil"/>
+							<tr>
+								<td>{image_url}</td>
+								<td>{firt_name}</td>
+								<td>{}</td>
+								<td>{}</td>
+								<td>{}</td>
+								<td>{}</td>
+							</tr>
 						</article>
 						{/* Facturacion */}
 						<article className="single-block">
 							<h2 className="section-title subtitle">Mi Facturación</h2>
+							
 						</article>
 						{/* Tarjetas */}
 						<article className="single-block">

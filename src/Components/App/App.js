@@ -6,21 +6,23 @@ import "./App.sass";
 
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import Login from "../Login/Login"
+import { Registro } from "../Registro/Registro";
 import Homepage from "../../Pages/LandingPage/Homepage/Homepage";
-import Login from "../../Pages/Auth/Login/Login";
-import Register from "../../Pages/Auth/Register/Register";
+import Error404 from "../../Pages/Error404/Error404";
 import Dashboard from "../../Pages/Plataform/Dashboard/Dashboard";
-import { Error404 } from "../../Pages";
-import {
-	HistorialClinico,
-	MiAgenda,
-	MisDoctores,
-	MisPacientes,
-	MisTurnos,
-	ProfesionalesPage,
-	UsuariosPage,
-	VerHistoriales,
-} from "../../Pages/Plataform";
+import MisPacientes from "../../Pages/Plataform/ProfessionalPages/MisPacientes";
+import MiAgenda from "../../Pages/Plataform/ProfessionalPages/MiAgenda";
+import HistorialClinico from "../../Pages/Plataform/PatientPages/HistorialClinico";
+import MisTurnos from "../../Pages/Plataform/PatientPages/MisTurnos";
+import MisDoctores from "../../Pages/Plataform/PatientPages/MisDoctores";
+import VerHistoriales from "../../Pages/Plataform/ProfessionalPages/VerHistoriales";
+import UsuariosPage from "../../Pages/Plataform/AdminPages/UsuariosPage";
+import ProfesionalesPage from "../../Pages/Plataform/AdminPages/ProfesionalesPage";
+import Blog from "../Blog/Blog";
+import UserPerfil from "../../User/UserPerfil";
+import BlogArticle from "../Blog/BlogArticle";
+
 
 function App() {
 	const [isLogged, setIsLogged] = useState(false);
@@ -85,8 +87,11 @@ function App() {
 					)}
 					<Route path="/" exact element={<Homepage> </Homepage>}></Route>
 					<Route path="/ingreso" element={<Login> </Login>}></Route>
-					<Route path="/registro" element={<Register> </Register>}></Route>
+					<Route path="/registro" element={<Registro></Registro>}></Route>
 					<Route path="/dashboard" element={<Dashboard> </Dashboard>}></Route>
+					<Route path="/blog" element={<Blog />}/>
+					<Route path="/article" element={<BlogArticle  />}/>
+					<Route path="/perfil" element={<UserPerfil />} />
 					<Route path="*" element={<Error404></Error404>}></Route>
 				</Routes>
 				<Footer></Footer>

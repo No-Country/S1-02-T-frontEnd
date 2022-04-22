@@ -1,0 +1,103 @@
+@import "../../CSS/index.sass";
+
+.contenedor{
+    height: 698px;
+    width: 1154px;
+    left: 142px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin-left: 15vh;
+    
+
+}
+
+.contenedor1{
+    margin-left: 15vh;
+    margin-top: 55px;
+
+}
+
+.fecha{
+    color: #F14A16;
+    padding-bottom: 20vh;
+}
+
+.titulo{
+    margin-top: 15vh;
+}
+
+.card{
+    max-width: 200%;
+    max-height: 200%;
+    padding: 15vh;
+}
+
+.card-img-top{
+    height: 400px;
+    width: 400px;
+}
+
+article{
+    margin-top: 15vh;
+}
+.card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 92%;
+    max-width: 32rem;
+    margin: 0 auto;
+    background: $color-neutral-white;
+    margin-bottom: 3rem !important;
+    padding-top: 1.8rem;
+    padding-bottom: 0.7rem;
+    border-radius: 1rem;
+    box-shadow: 0px 6px 9px #72727263;
+}
+
+.contenedor-card{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 1.5rem;
+}
+
+.linkToArticle{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5vh;
+    cursor: pointer;
+    color: red;
+    border-radius: $color-main-normal;
+}
+
+.linkToArticle:hover{
+    color: black;
+}
+
+// .contenedor-article{
+//     display: flex;
+//     justify-content: center;
+//     margin-top: 2vh;
+//     padding-top: 10vh;
+// }
+
+.img-article{
+    margin-top: 25vh;
+    margin-right: 30vh;
+    margin-left: 10vh;
+}
+
+.imgArticle{
+    margin-top: 10vh;
+}
+
+
+.fechaArticle{
+    color: #F14A16;
+    font-size: 16px;
+    padding-top: 20vh;
+    margin-top: 10vh;
+}

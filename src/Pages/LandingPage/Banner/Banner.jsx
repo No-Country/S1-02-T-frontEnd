@@ -1,5 +1,6 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 import { bannerImageUrl } from "../../../Utils/constants";
 import "./Banner.sass";
@@ -18,7 +19,7 @@ const Banner = () => {
 					</h2>
 					<button className="btn-pastel">
 						únete
-						<BsArrowRight id="btnArrow"></BsArrowRight>
+						<Link id="btnArrow" to={`/registro`}></Link>
 					</button>
 				</div>
 			</div>

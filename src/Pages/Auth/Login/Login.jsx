@@ -64,7 +64,6 @@ const Login = () => {
 							/>
 						</div>
 						<button type="submit" className="btn-pastel">
-							{" "}
 							Enviar
 						</button>
 					</form>

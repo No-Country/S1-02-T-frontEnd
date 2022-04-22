@@ -6,7 +6,7 @@ import Icon3 from "../Assets/Icons/Icon3.svg";
 // ==========================================
 // API
 // ==========================================
-export const apiBaseUrl = "https://s1-02-t.herokuapp.com";
+export const apiBaseUrl = "https://s1-02-t-backend.herokuapp.com";
 
 // ==========================================
 // IMAGES

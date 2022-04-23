@@ -1,5 +1,24 @@
 @import "../../../CSS/index.sass"
 
+.icono
+    bottom: 0
+    left: 0
+    height: 100%
+    z-index: -1
+    .container
+        width: 100vw
+        height: 100vh
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap :7rem
+        padding: 0 2rem
+        
+        .img
+            display: flex
+            justify-content: flex-end
+            align-items: center
+            width: 500px
+
 .form-container
     width: 75%
     max-width: 25rem
@@ -13,9 +32,18 @@
         display: flex
         flex-direction: column
 
+
+
+            
+    
+
+
 @media (min-width: 500px)
     .form-container
         padding-top: 5vh
+        display: flex
+        flex-direction: row
+        justify-content: center
 
 @media (min-width: 1000px)
     .form-container

@@ -9,6 +9,9 @@ import Loading from "../../../Components/Loading/Loading";
 import authService from "../../../Services/auth.service";
 import userService from "../../../Services/user.service";
 import MiTarjeta from "../Perfil/MiTarjeta";
+import Calendario from "../Perfil/Calendario";
+import MisProfesionales from "../Perfil/MisProfesionales";
+import MiFacturacion from "../Perfil/MiFacturacion";
 
 const Dashboard = () => {
 	let navigate = useNavigate();
@@ -93,23 +96,12 @@ const Dashboard = () => {
 						{/* Profesionales */}
 						<article className="single-block">
 							<h2 className="section-title subtitle">Mis Profesionales</h2>
-							<div>
-								<h2>{fullName(firt_name, last_name)}</h2>
-							</div>
-							<div>
-								<button className="btn-solid">Agendar Cita</button>
-							</div>
+							<MisProfesionales />
 						</article>
 						{/* Facturacion */}
 						<article className="single-block">
 							<h2 className="section-title subtitle">Mi Facturación</h2>
-							<tr>
-								<td>{image_url || profilePlaceholder}</td>
-								<td>{firt_name}</td>
-								<td>{date}</td>
-								<td>{state}</td>
-								<td>{price}</td>
-							</tr>
+							<MiFacturacion />
 						</article>
 						{/* Tarjetas */}
 						<article className="single-block">
@@ -119,6 +111,7 @@ const Dashboard = () => {
 						{/* Calendar */}
 						<article className="single-block">
 							<h2 className="section-title subtitle">Calendario</h2>
+							<Calendario />
 						</article>
 						<button
 							type="submit"

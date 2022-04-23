@@ -22,6 +22,9 @@ import BlogArticle from "../Blog/BlogArticle";
 import MiTarjeta from "../../Pages/Plataform/Perfil/MiTarjeta";
 import Login from "../../Pages/Auth/Login/Login";
 import Register from "../../Pages/Auth/Register/Register";
+import Calendario from "../../Pages/Plataform/Perfil/Calendario";
+import MisProfesionales from "../../Pages/Plataform/Perfil/MisProfesionales";
+import MiFacturacion from "../../Pages/Plataform/Perfil/MiFacturacion";
 
 function App() {
 	const [isLogged, setIsLogged] = useState(false);
@@ -61,7 +64,7 @@ function App() {
 
 							{/* Profesional */}
 							<Route
-								path="/prof/mi-agenda"
+								path="	"
 								element={<MiAgenda></MiAgenda>}
 							></Route>
 							<Route
@@ -90,8 +93,7 @@ function App() {
 					<Route path="/dashboard" element={<Dashboard> </Dashboard>}></Route>
 					<Route path="/blog" element={<Blog />} />
 					<Route path="/article" element={<BlogArticle />} />
-
-					<Route path="/miTarjeta" element={<MiTarjeta />} />
+					<Route path="/factura" element={<MiFacturacion />} />
 					<Route path="*" element={<Error404></Error404>}></Route>
 				</Routes>
 				<Footer></Footer>

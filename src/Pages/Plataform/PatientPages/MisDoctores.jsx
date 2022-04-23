@@ -1,4 +1,6 @@
 import React from "react";
+import Professionals from "../../LandingPage/Professionals/Professionals";
+
 import "./PatientPages.sass";
 
 const MisDoctores = () => {
@@ -9,6 +11,7 @@ const MisDoctores = () => {
 					<span>PATIENT</span>
 					<h2>Mis Doctores</h2>
 				</div>
+				
 			</div>
 		</section>
 	);

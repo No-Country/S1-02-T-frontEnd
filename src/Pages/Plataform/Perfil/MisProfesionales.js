@@ -1,18 +1,23 @@
-import React, { useState } from 'react'
-import authService from '../../../Services/auth.service';
-import { apiBaseUrl } from '../../../Utils/constants';
+import React from 'react'
+import "./MisProfesionales.sass"
+import profesional from "../../../img/profesional.png"
 
 
 const MisProfesionales = () => {
 
-    
-    
-
-
   return (
     <div>
-        <div>
-            <h2>Aca van los profesionales</h2>
+        <div className='profesionales-container'>
+          <div>
+            <img src={profesional} alt="foto profesional" />
+            <h2>Kristen Watson</h2>
+            <p>Psicologa</p>
+          </div>
+          <div>
+            <button className='btn-pastel'>Agendar cita</button>
+          </div>
+            
+            
         </div>
     </div>
   )

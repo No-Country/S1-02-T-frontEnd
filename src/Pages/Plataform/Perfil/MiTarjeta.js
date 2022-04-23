@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import "./MiFacturacion.scss"
+import "./MiTarjeta.scss"
 
 const MiTarjeta = () => {
 

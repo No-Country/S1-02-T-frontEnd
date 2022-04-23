@@ -103,6 +103,7 @@ export const Registro = () => {
                               type="text"
                               name="password"
                               placeholder="Ingrese su contraseña"
+                              hidden
                               value={data.user.password}
                               id="password"
                               onChange={(e) => {

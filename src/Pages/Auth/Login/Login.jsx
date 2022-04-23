@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logoInicio from "../../../img/iconoCiudadanos.png"
 import { useNavigate } from "react-router-dom";
 import "./Login.sass";
 import authService from "../../../Services/auth.service";
@@ -35,41 +36,43 @@ const Login = () => {
 	};
 
 	return (
-		<section className="section page-sect">
-			<div className="section-center">
-				<div className="section-title">
-					<span>Nuestra Plataforma</span>
-					<h2>Ingreso</h2>
-				</div>
-				<div className="form-container">
-					<form onSubmit={handleSubmit} className="login-form">
-						<div className="single-input">
-							<label htmlFor="username">Email</label>
-							<input
-								type="text"
-								name="username"
-								placeholder="E-mail"
-								value={email}
-								onChange={onChangeUsername}
-							/>
+		
+				<section className="section page-sect">
+					<div className="section-center">
+						<div className="section-title">
+							<span>Nuestra Plataforma</span>
+							<h2>Ingreso</h2>
 						</div>
-						<div className="single-input">
-							<label htmlFor="password">Contraseña</label>
-							<input
-								type="text"
-								name="password"
-								placeholder="Ingrese su contraseña"
-								value={password}
-								onChange={onChangePassword}
-							/>
+						<div className="form-container">
+							<form onSubmit={handleSubmit} className="login-form">
+								<div className="single-input">
+									<label htmlFor="username">Email</label>
+									<input
+										type="text"
+										name="username"
+										placeholder="E-mail"
+										value={email}
+										onChange={onChangeUsername}
+									/>
+								</div>
+								<div className="single-input">
+									<label htmlFor="password">Contraseña</label>
+									<input
+										type="text"
+										name="password"
+										placeholder="Ingrese su contraseña"
+										value={password}
+										onChange={onChangePassword}
+									/>
+								</div>
+								<button type="submit" className="btn-pastel">
+									Enviar
+								</button>
+							</form>
 						</div>
-						<button type="submit" className="btn-pastel">
-							Enviar
-						</button>
-					</form>
-				</div>
-			</div>
-		</section>
+					</div>
+				</section>
+			
 	);
 };
 

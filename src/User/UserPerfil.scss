@@ -1,0 +1,26 @@
+
+
+
+.perfil-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.lista{
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.lista:hover{
+    color: grey;
+}
+
+
+
+.perfil-container2{
+    padding-top: 2vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
